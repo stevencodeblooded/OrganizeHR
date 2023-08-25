@@ -1,0 +1,21 @@
+.bg-filter-form {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #abb8c3;
+}
+
+.filter-container {
+  padding: 20px;
+}
+
+.filter-container input {
+  font-size: 18px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Segoe UI";
+  width: 300px;
+  margin-right: 2px;
+}

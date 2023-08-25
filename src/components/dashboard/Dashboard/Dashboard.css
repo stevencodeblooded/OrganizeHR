@@ -1,0 +1,13 @@
+.dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .dashboard-container {
+      grid-template-columns: 1fr;
+    }
+  }

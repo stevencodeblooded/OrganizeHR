@@ -1,0 +1,50 @@
+.dashboard-quick-links {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  .dashboard-quick-links h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 1.7rem;
+  }
+  
+  .quick-link-item h3 {
+    color: #317088;
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  
+  .quick-links {
+    background-color: lightgreen;
+    color: black;
+    border: none;
+    padding: 7px 15px;
+    border-radius: 7px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+    text-decoration: none;
+  }
+  
+  .quick-link-item {
+    margin-bottom: 15px;
+  }
+  
+  .quick-links:hover {
+    color: white;
+    background-color: #162;
+  }
+  
+  .quick-link-item input {
+    width: 95%;
+    padding: 8px;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: 0.3s all ease-in-out;
+  }
+  

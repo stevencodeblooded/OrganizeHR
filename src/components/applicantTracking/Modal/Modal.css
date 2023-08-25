@@ -1,0 +1,42 @@
+.modal-deletion {
+  background-color: #f0f0f0;
+  color: #054146;
+  position: relative;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  max-width: 300px;
+}
+
+.modal-deletion h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-deletion section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 40px;
+}
+
+.modal-btn {
+  padding: 5px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+.modal-btn:hover {
+  color: #000;
+}
+
+.highlighted-text {
+  color: blue; /* Change this to your desired styling */
+  font-weight: bold; /* Change this to your desired styling */
+}

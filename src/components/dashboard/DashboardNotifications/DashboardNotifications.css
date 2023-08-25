@@ -1,0 +1,29 @@
+
+.dashboard-notifications {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.dashboard-notifications h2 {
+  color: #007bff;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+.dashboard-notifications h3 {
+  color: #317088;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.notification-item {
+  margin-bottom: 15px;
+}
+
+.notification-item p {
+  font-size: 15px;
+  color: #555;
+}

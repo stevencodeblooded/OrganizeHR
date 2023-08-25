@@ -1,0 +1,39 @@
+.applicant {
+  display: inline-block;
+}
+
+.border-black {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  margin: 10px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 168px;
+  width: 300px;
+}
+
+.border-black:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.applicant-name {
+  color: #317088;
+  font-size: 18px;
+  transition: 0.3s all ease-in-out;
+}
+
+.applicant-name:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.applicant-image {
+  height: 100px;
+  width: 100px;
+  margin-right: 20px;
+  border-radius: 5px;
+}

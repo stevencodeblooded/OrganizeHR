@@ -1,0 +1,92 @@
+.edit-bg {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+.edit-btns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.edit-form input,
+textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  color: #333333;
+  background-color: #b0c4de;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: 0.3s ease;
+}
+
+.edit-form textarea {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.edit-form textarea:focus {
+  border: 2px solid #0056b3;
+}
+
+.edit-form input:focus {
+  outline: none;
+  border: 2px solid #007bff;
+}
+
+.saveBtn,
+.cancelBtn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+.saveBtn:focus,
+.cancelBtn:focus {
+  border: #317088;
+  outline: none;
+}
+
+.saveBtn:hover,
+.cancelBtn:hover {
+  background-color: #0056b3;
+}
+
+.documents {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.documents a {
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s ease-in-out;
+  color: #007bff;
+  position: relative;
+}
+
+.documents a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+.documents .icons {
+  margin-right: 5px;
+  color: #0056b3;
+}

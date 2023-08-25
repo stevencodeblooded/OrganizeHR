@@ -1,0 +1,28 @@
+/* .form-search-filter {
+    display: flex;
+    flex-direction: column;
+} */
+
+.form-filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Segoe UI';
+}
+
+.form-elements {
+    border: red;
+}
+
+section input, button, select {
+    font-size: 18px;
+    padding: 7px 10px;
+}
+
+section input {
+    width: 300px;
+}
+
+section select {
+    width: 180px;
+}

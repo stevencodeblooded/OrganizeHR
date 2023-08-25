@@ -1,0 +1,27 @@
+
+.heading {
+    background-image: url("../../../images/bg\ -img.jpg");
+    background-size: cover;
+    color: white;
+    height: 100vh;
+  }
+  
+  .heading h1 {
+    font-size: 4.5rem;
+    color: #abb8c3;
+    padding-top: 180px;
+    padding-inline: 100px;
+    padding-bottom: 0;
+  }
+  
+  .span-header {
+    color: #317088;
+  }
+  
+  .heading-text {
+    font-size: 22px;
+    margin-top: 20px;
+    padding-left: 100px;
+    width: 100vh;
+  }
+  

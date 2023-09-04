@@ -1,5 +1,6 @@
 import React from 'react'
-import ApplicantTracking from './applicantTracking/ApplicantTracking/ApplicantTracking'
+
+import ApplicantTracking from '../components/applicantTracking/ApplicantTracking/ApplicantTracking'
 
 const ApplicantTrackingPage = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Nav from './dashboard/Nav/Nav'
+import Nav from '../components/dashboard/Nav/Nav'
 
 const Contact = () => {
   return (

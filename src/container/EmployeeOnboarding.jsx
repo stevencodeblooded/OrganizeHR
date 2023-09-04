@@ -1,7 +1,7 @@
 import React from "react";
 
-import Nav from "./dashboard/Nav/Nav";
-import Footer from "./footer/Footer";
+import Nav from "../components/dashboard/Nav/Nav";
+import Footer from "../components/footer/Footer";
 
 const EmployeeOnboarding = () => {
   return (

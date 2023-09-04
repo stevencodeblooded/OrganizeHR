@@ -1,0 +1,23 @@
+.employee--page {
+    width: 1000px;
+    margin-inline: auto;
+    margin-top: 100px;
+}
+
+.each-employee-bg {
+    background-color: #f9f9f9;
+    border: none;
+    padding-bottom: 70px;
+}
+
+.loading-employee {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+    align-items: center;
+}
+
+.loading-employee > img {
+    margin-bottom: 30px;
+}

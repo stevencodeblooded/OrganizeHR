@@ -1,0 +1,28 @@
+.all-descriptions {
+    margin: 50px;
+}
+
+.decription-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block: 70px;
+    gap: 50px;
+}
+
+.text-description {
+    font-size: 22px;
+    font-weight: 400;
+    width: 600px;
+}
+
+.description-image {
+    width: 500px;
+}
+
+.description-image-2 {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    border: none;
+}

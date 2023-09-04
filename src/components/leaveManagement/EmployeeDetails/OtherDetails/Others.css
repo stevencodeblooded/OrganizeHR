@@ -1,0 +1,36 @@
+.others {
+    padding-inline: 70px;
+}
+
+.others h3 {
+    color: #007bff;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-block: 35px;
+}
+
+.others h4 {
+    color: #317088;
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.others p {
+    font-weight: 500;
+}
+
+.detail-label {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.leave-flex {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+}
+
+.leave-type, .leave-dates, .leave-status {
+    display: flex;
+    justify-content: space-between;
+}

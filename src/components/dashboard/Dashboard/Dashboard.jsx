@@ -9,6 +9,7 @@ import DashboardQuickLinks from "../DashboardQuickLinks/DashboardQuickLinks";
 import Footer from "../../footer/Footer";
 
 import './Dashboard.css'
+import Description from "../Description/Description";
 
 const Dashboard = () => {
   return (
@@ -20,6 +21,9 @@ const Dashboard = () => {
         <DashboardNotifications />
         <DashboardUpdates />
         <DashboardQuickLinks />
+      </div>
+      <div className="description">
+        <Description />
       </div>
         <Footer />
     </div>

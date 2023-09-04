@@ -1,9 +1,9 @@
 import React from 'react'
 
-import allEmployees from '../../../../mockData/employeesList'
+import allEmployees from '../../../mockData/employeesList'
+import Card from './Card/Card'
 
 import './EmployeeCard.css'
-import Card from './Card/Card'
 
 const EmployeeCard = () => {
 

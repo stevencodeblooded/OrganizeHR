@@ -1,7 +1,7 @@
-
 .nav-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: #054146;
     position: fixed;
     top: 0;
@@ -9,6 +9,10 @@
     width: 100%;
     z-index: 9999;
   }
+
+  /* .scrolled {
+    
+  } */
   
   .logo {
     width: 180px;
@@ -32,17 +36,17 @@
   .nav-links li a {
     text-decoration: none;
     font-size: 16px;
-    background-color: #054146;
     color: white;
     margin-right: 25px;
     transition: 0.3s all ease-in-out;
     padding: 5px;
     height: 20px;
+    font-weight: 600;
   }
   
   .nav-links li a:hover {
     background-color: #317088;
-    border-radius: 20px;
+    border-radius: 6px;
     color: thistle;
   }
   
@@ -50,8 +54,8 @@
     padding: 7px 20px;
     border-radius: 10px;
     font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
-    margin-left: 40px;
     border: none;
     transition: 0.3s all ease-in-out;
   }
@@ -65,15 +69,27 @@
   #login:hover {
     background-color: rgba(255, 255, 255, 0.05);
     color: white;
+    transform: scale(1.05);
   }
   
   #signin {
-    background-color: lightgreen;
+    background-color: #162;
+    color: #ccc;
   }
   
   #signin:hover {
-    background-color: #162;
-    color: white;
+    color: #007bff;
+    transform: scale(1.05);
+  }
+
+  .my-nav-btns {
+    padding-right: 15px;
+    display: flex;
+    column-gap: 10px;
   }
   
+  .active-Link {
+    background-color: #317088;
+    border-radius: 6px;
+  }
   

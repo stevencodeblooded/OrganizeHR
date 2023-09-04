@@ -4,8 +4,6 @@ import './ApplicantsList.css'
 
 const ApplicantsList = ({ handleApplicantClick, applicant }) => {
 
-  console.log(applicant.img);
-  
   return (
     <div className="applicant">
 

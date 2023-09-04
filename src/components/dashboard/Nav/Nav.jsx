@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../../../images/logoRe.png";
 import Dropdown from "../../dropdown/Dropdown";
 
@@ -11,44 +11,62 @@ import './Nav.css'
 
 const Nav = () => {
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setScrolled(true)
+      } else {
+        setScrolled(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+  
   const [dropdown, setDropdown] = useState(false)
 
   const onMouseEnter  = () => setDropdown(true)
-  
   const onMouseLeave  = () => setDropdown(false)
 
   return (
-    <nav className="nav-container">
-      <Link to='/'>
+    <nav className={scrolled ? 'nav-container scrolled' : 'nav-container'}>
+      <NavLink to='/'>
         <img src={logo} alt="logo" className="logo" />
-      </Link>
+      </NavLink>
 
       <ul className="nav-links"> 
         <li>
-          <Link to='/Applicant-Tracking'>Applicant Tracking</Link>
+          <NavLink to='/Applicant-Tracking' className={({isActive}) => isActive ? 'active-Link' : null} >Applicant Tracking</NavLink>
         </li>
 
         <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >
-          <Link to='/Employee-Onboarding'>Employee Onboarding <FontAwesomeIcon className="dropIcon" icon={faAngleDown}/></Link>
+          <NavLink to='/Employee-Onboarding' className={({isActive}) => isActive ? 'active-Link' : null} >Employee Onboarding <FontAwesomeIcon className="dropIcon" icon={faAngleDown}/></NavLink>
           { dropdown && <Dropdown /> }   
         </li>
 
         <li>
-          <Link to='/Leave-Management'>Leave Management</Link>
+          <NavLink to='/Leave-Management' className={({isActive}) => isActive ? 'active-Link' : null} >Leave Management</NavLink>
         </li>
 
         <li>
-          <Link to='/Intern-Directory'>Intern Directory</Link>
+          <NavLink to='/Intern-Directory' className={({isActive}) => isActive ? 'active-Link' : null} >Intern Directory</NavLink>
         </li>
         
       </ul>
 
-      <button className="button-nav" id="login">
-        Log In
-      </button>
-      <button className="button-nav" id="signin">
-        Sign Up
-      </button>
+      <div className="my-nav-btns">
+        <button className="button-nav" id="login">
+          Log In
+        </button>
+        <button className="button-nav" id="signin">
+          Sign Up
+        </button>
+      </div>
+      
     </nav>
   );
 };

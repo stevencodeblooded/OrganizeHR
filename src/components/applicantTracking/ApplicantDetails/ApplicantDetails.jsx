@@ -89,7 +89,7 @@ const ApplicantDetails = ({
 
   //
   useEffect(() => {
-    console.log("Cancel Applicant Editing", editedApplicant);
+    // alert("Cancel Applicant Editing", editedApplicant);
   }, [editedApplicant]);
 
   const handleChange = (e) => {

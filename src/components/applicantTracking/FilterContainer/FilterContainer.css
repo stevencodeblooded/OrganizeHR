@@ -11,11 +11,16 @@
 }
 
 .filter-container input {
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 400;
   padding: 5px;
   border: none;
   border-radius: 5px;
   font-family: "Segoe UI";
   width: 300px;
   margin-right: 2px;
+}
+
+.filter-container input {
+
 }

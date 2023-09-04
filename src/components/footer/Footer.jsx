@@ -11,6 +11,14 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import "./Footer.css";
 
 const Footer = () => {
+
+  const handleBackTop  = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -92,6 +100,32 @@ const Footer = () => {
           </ul>
         </section>
       </div>
+
+      <div className="footer-line">
+        <hr />
+      </div>
+
+      <div className="terms">
+        <Link to='' className="terms-link">Terms of Use</Link>
+        <hr />       
+        <Link to='' className="terms-link">Privacy Policy</Link>
+        <hr /> 
+        <Link to='' className="terms-link">Refund Policy</Link>
+        <hr /> 
+        <Link to='' className="terms-link">Copyright Disclaimer</Link>
+        <hr /> 
+        <Link to='' className="terms-link">Cookies</Link>
+        <hr /> 
+      </div>
+
+      <div className="footer-copright">
+        <p>© Copyright 2023 OrganizeHR All Rights Reserved.</p>
+      </div>
+
+      <div className="back-top">
+        <button onClick={handleBackTop}>Back To Top</button>
+      </div>
+      
     </footer>
   );
 };

@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Nav from './dashboard/Nav/Nav'
-import LeaveManagement from './leaveManagement/LeaveManagement/LeaveManagement'
-import Footer from './footer/Footer'
+import Nav from '../components/dashboard/Nav/Nav'
+import LeaveManagement from '../components/leaveManagement/LeaveManagement'
+import Footer from '../components/footer/Footer'
 
 const LeaveManagementPage = () => {
   return (

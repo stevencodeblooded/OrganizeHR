@@ -1,0 +1,72 @@
+.form-search-filter {
+    background-image: url('../../../images/cool.jpg');
+    margin-bottom: 30px;
+    padding-block: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.form-filter {
+    font-family: 'Segoe UI';
+    width: 600px;
+}
+
+.form-elements > section input, select {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    border: none;
+    padding-block: 3px;
+    background-color: #CCC;
+    color: #007bff;
+}
+
+.form-elements > section input {
+    width: 600px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.form-elements > section input::placeholder {
+    color: #007bff;
+}
+
+.form-elements > section input:focus {
+    outline: none;
+}
+
+.smooth-advanced {
+    transition: .3s all ease-in-out;
+}
+
+section select {
+    width: 300px;
+    transition: 0.3s all ease-in-out;
+}
+
+section select:focus {
+    outline: none;
+}
+
+section select:hover {
+    background-color: rgba(255, 255, 255, 0.09);
+}
+
+.reset-button {
+    font-size: 20px;
+    font-weight: 400;
+    border:none;
+    padding: 5px 20px;
+    cursor: pointer;
+    background-color: #317088;
+    color: white;
+    transition: 0.3s all ease-in-out;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.reset-button:hover{
+    color: thistle;
+    transform: scale(1.03);
+}

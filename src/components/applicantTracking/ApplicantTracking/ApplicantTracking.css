@@ -1,6 +1,8 @@
 .all-applicants {
-    width: 95%;
-    margin: 15px auto;
+    margin-block: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   

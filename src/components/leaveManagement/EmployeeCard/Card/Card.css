@@ -1,0 +1,101 @@
+.card {
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    height: 300px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.bg-image-profile {
+    height: 80px;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.profile-flex {
+    display: flex;
+    justify-content: center;
+}
+
+
+.employee-profile-pic {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    border: none;
+    border-radius: 50%;
+    margin-top: 45px;
+}
+
+.details-for-employee {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.employee-name {
+    font-size: 22px;
+    font-weight: 500;
+    color: #007bff;
+}
+
+.details-for-employee p {
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+.horizontal {
+    width: 30px;
+    margin-block: 13px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top: 3px dotted #007bff;
+}
+
+.other-details {
+    padding-inline: 20px;
+    color: gray;
+}
+
+.other-details h5 {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.other-details-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-list {
+    color: #007bff;
+}
+
+.another-horizontal {
+    display: flex;
+    justify-content: center;
+}
+
+.another-horizontal hr {
+    width: 30px;
+    border: 3px dotted #007bff;
+    margin-block: 10px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+.phone-number {
+    display: flex;
+    justify-content: center;
+}
+
+.phone-number p {
+    font-size: 14px;
+    font-weight: 500;
+    font-size: 14px;        
+}

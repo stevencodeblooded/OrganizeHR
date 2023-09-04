@@ -1,27 +1,31 @@
+.heading-with-background {
+  position: relative;
+}
 
 .heading {
-    background-image: url("../../../images/bg\ -img.jpg");
-    background-size: cover;
-    color: white;
-    height: 100vh;
-  }
-  
-  .heading h1 {
-    font-size: 4.5rem;
-    color: #abb8c3;
-    padding-top: 180px;
-    padding-inline: 100px;
-    padding-bottom: 0;
-  }
-  
-  .span-header {
-    color: #317088;
-  }
-  
-  .heading-text {
-    font-size: 22px;
-    margin-top: 20px;
-    padding-left: 100px;
-    width: 100vh;
-  }
-  
+  position: absolute;
+  height: 100vh;
+  width: 45%;
+  padding-left: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading h1 {
+  font-size: 4.5rem;
+  color: #f0f0f0;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.span-header {
+  color: #007bff;
+}
+
+.heading-text {
+  font-size: 22px;
+  z-index: 1;
+  color: #ccc;
+}
+

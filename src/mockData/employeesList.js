@@ -32,6 +32,22 @@ const employeeList = [
     email: "jane@example.com",
     phone: "987-654-3210",
     department: "Design",
+    address: "123 Main Street, City, Country",
+      employmentStatus: "Active",
+      dateOfJoining: "2022-01-15",
+      employmentType: "Full-Time",
+      reportingManager: {
+        name: "Manager Name",
+        email: "manager@example.com",
+        phone: "987-654-3210",
+      },
+      leaveBalance: 15,
+      performanceReviews: [
+        { date: "2022-03-01", rating: "Positive", comments: "Well done!" },
+      ],
+      leaveHistory: [
+        { type: "Sick Leave", dates: "2022-05-15 to 2022-05-17", status: "pending" },
+      ],
   },
   {
     id: 3,
@@ -41,6 +57,22 @@ const employeeList = [
     email: "michael@example.com",
     phone: "555-555-5555",
     department: "Product",
+    address: "123 Main Street, City, Country",
+      employmentStatus: "Active",
+      dateOfJoining: "2022-01-15",
+      employmentType: "Full-Time",
+      reportingManager: {
+        name: "Manager Name",
+        email: "manager@example.com",
+        phone: "987-654-3210",
+      },
+      leaveBalance: 15,
+      performanceReviews: [
+        { date: "2022-03-01", rating: "Positive", comments: "Well done!" },
+      ],
+      leaveHistory: [
+        { type: "Sick Leave", dates: "2022-05-15 to 2022-05-17", status: "Approved" },
+      ],
   },
   {
     id: 4,
@@ -50,6 +82,22 @@ const employeeList = [
     email: "emily@example.com",
     phone: "111-222-3333",
     department: "Marketing",
+    address: "123 Main Street, City, Country",
+      employmentStatus: "Active",
+      dateOfJoining: "2022-01-15",
+      employmentType: "Full-Time",
+      reportingManager: {
+        name: "Manager Name",
+        email: "manager@example.com",
+        phone: "987-654-3210",
+      },
+      leaveBalance: 15,
+      performanceReviews: [
+        { date: "2022-03-01", rating: "Positive", comments: "Well done!" },
+      ],
+      leaveHistory: [
+        { type: "Sick Leave", dates: "2022-05-15 to 2022-05-17", status: "pending" },
+      ],
   },
   {
     id: 5,
@@ -59,6 +107,22 @@ const employeeList = [
     email: "david@example.com",
     phone: "444-444-4444",
     department: "Finance",
+    address: "123 Main Street, City, Country",
+      employmentStatus: "Active",
+      dateOfJoining: "2022-01-15",
+      employmentType: "Full-Time",
+      reportingManager: {
+        name: "Manager Name",
+        email: "manager@example.com",
+        phone: "987-654-3210",
+      },
+      leaveBalance: 15,
+      performanceReviews: [
+        { date: "2022-03-01", rating: "Positive", comments: "Well done!" },
+      ],
+      leaveHistory: [
+        { type: "Sick Leave", dates: "2022-05-15 to 2022-05-17", status: "rejected" },
+      ],
   },
   {
     id: 6,
@@ -68,6 +132,22 @@ const employeeList = [
     email: "sophia@example.com",
     phone: "666-666-6666",
     department: "Human Resources",
+    address: "123 Main Street, City, Country",
+      employmentStatus: "Active",
+      dateOfJoining: "2022-01-15",
+      employmentType: "Full-Time",
+      reportingManager: {
+        name: "Manager Name",
+        email: "manager@example.com",
+        phone: "987-654-3210",
+      },
+      leaveBalance: 15,
+      performanceReviews: [
+        { date: "2022-03-01", rating: "Positive", comments: "Well done!" },
+      ],
+      leaveHistory: [
+        { type: "Sick Leave", dates: "2022-05-15 to 2022-05-17", status: "pending" },
+      ],
   },
   {
     id: 7,
@@ -77,6 +157,22 @@ const employeeList = [
     email: "ethan@example.com",
     phone: "777-777-7777",
     department: "Operations",
+    address: "123 Main Street, City, Country",
+      employmentStatus: "Active",
+      dateOfJoining: "2022-01-15",
+      employmentType: "Full-Time",
+      reportingManager: {
+        name: "Manager Name",
+        email: "manager@example.com",
+        phone: "987-654-3210",
+      },
+      leaveBalance: 15,
+      performanceReviews: [
+        { date: "2022-03-01", rating: "Positive", comments: "Well done!" },
+      ],
+      leaveHistory: [
+        { type: "Sick Leave", dates: "2022-05-15 to 2022-05-17", status: "Approved" },
+      ],
   },
   {
     id: 8,
@@ -86,6 +182,22 @@ const employeeList = [
     email: "olivia@example.com",
     phone: "888-888-8888",
     department: "Sales",
+    address: "123 Main Street, City, Country",
+      employmentStatus: "Active",
+      dateOfJoining: "2022-01-15",
+      employmentType: "Full-Time",
+      reportingManager: {
+        name: "Manager Name",
+        email: "manager@example.com",
+        phone: "987-654-3210",
+      },
+      leaveBalance: 15,
+      performanceReviews: [
+        { date: "2022-03-01", rating: "Positive", comments: "Well done!" },
+      ],
+      leaveHistory: [
+        { type: "Sick Leave", dates: "2022-05-15 to 2022-05-17", status: "Rejected" },
+      ],
   },
   {
     id: 9,
@@ -95,6 +207,22 @@ const employeeList = [
     email: "william@example.com",
     phone: "999-999-9999",
     department: "Engineering",
+    address: "123 Main Street, City, Country",
+      employmentStatus: "Active",
+      dateOfJoining: "2022-01-15",
+      employmentType: "Full-Time",
+      reportingManager: {
+        name: "Manager Name",
+        email: "manager@example.com",
+        phone: "987-654-3210",
+      },
+      leaveBalance: 15,
+      performanceReviews: [
+        { date: "2022-03-01", rating: "Positive", comments: "Well done!" },
+      ],
+      leaveHistory: [
+        { type: "Sick Leave", dates: "2022-05-15 to 2022-05-17", status: "Approved" },
+      ],
   },
   {
     id: 10,
@@ -104,6 +232,22 @@ const employeeList = [
     email: "ava@example.com",
     phone: "123-123-1234",
     department: "Content",
+    address: "123 Main Street, City, Country",
+      employmentStatus: "Active",
+      dateOfJoining: "2022-01-15",
+      employmentType: "Full-Time",
+      reportingManager: {
+        name: "Manager Name",
+        email: "manager@example.com",
+        phone: "987-654-3210",
+      },
+      leaveBalance: 15,
+      performanceReviews: [
+        { date: "2022-03-01", rating: "Positive", comments: "Well done!" },
+      ],
+      leaveHistory: [
+        { type: "Sick Leave", dates: "2022-05-15 to 2022-05-17", status: "pending" },
+      ],
   },
 ];
 

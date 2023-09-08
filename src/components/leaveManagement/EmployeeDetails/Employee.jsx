@@ -2,8 +2,6 @@ import React from "react";
 
 import { useParams } from "react-router-dom";
 
-import Nav from "../../dashboard/Nav/Nav";
-import Footer from "../../footer/Footer";
 import allEmployees from '../../../mockData/employeesList'
 import EmployeInfo from './EmployeeInfo/EmployeInfo'
 import loading from '../../../images/loading.png'
@@ -20,15 +18,16 @@ const Employee = () => {
 
   return (
     <div>
-      <Nav />
-
       <div className="employee--page">
         {employee ? (
           <section className="each-employee-bg">
             <EmployeInfo 
               employee={employee}
             /> 
-            <Others />
+
+            <Others 
+              employee={employee}
+            />
           </section>
         ) : (
           <div className="loading-employee">
@@ -37,8 +36,6 @@ const Employee = () => {
           </div>
         )}
       </div>
-      
-      <Footer />
     </div>
   );
 };

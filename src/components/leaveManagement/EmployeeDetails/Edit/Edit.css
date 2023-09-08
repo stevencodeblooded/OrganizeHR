@@ -1,0 +1,60 @@
+.edit-leave-employee {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-edit-leave {
+    background-color: #f0f0f0;
+    padding: 20px;
+    width: 500px;
+    border-radius: 15px;
+}
+
+.form-edit-leave > h1 {
+    color: #007bff;
+    font-size: 24px;
+    text-align: center;
+}
+
+
+.form-edit-leave > button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    transition: .3s all ease-in-out;
+    cursor: pointer;
+    position: absolute;
+    margin-left: auto;
+}
+
+.form-edit-leave > button:hover {
+    color: #000;
+}
+.form-edit-leave > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-edit-leave > div > input {
+    font-family: 'Segoe UI';
+    padding: 7px;
+    margin-block: 4px;
+    border: none;
+    border-radius: 7px;
+    font-size: 17px;
+    font-weight: 600;
+    background-color: #b0c4de;
+    color: #054146;
+}

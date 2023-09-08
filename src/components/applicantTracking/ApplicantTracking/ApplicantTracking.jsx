@@ -2,14 +2,15 @@ import React, {useState} from "react";
 
 import ApplicantsList from "../ApplicantsList/ApplicantsList";
 import applicantsList from "../../../mockData/applicantsList";
-import Nav from "../../dashboard/Nav/Nav";
 import ApplicantDetails from "../ApplicantDetails/ApplicantDetails";
 import FilterContainer from "../FilterContainer/FilterContainer";
-import Footer from "../../footer/Footer";
 
 import './ApplicantTracking.css'
 
 const ApplicantTracking = () => {
+
+  console.log(applicantsList);
+  
   const [selectedApplicant, setSelectedApplicant] = useState(null);
 
   const [filterCriteria, setFilterCriteria] = useState({
@@ -94,7 +95,6 @@ const ApplicantTracking = () => {
 
   return (
     <div className="applicants-information">
-      <Nav />
 
       <FilterContainer 
         onFilterChange={handleFilterChange} 
@@ -114,8 +114,6 @@ const ApplicantTracking = () => {
         setApplicants={setApplicants}
         onDelete={handleApplicantDelete}
       />
-      
-      <Footer />
 
     </div>
   );

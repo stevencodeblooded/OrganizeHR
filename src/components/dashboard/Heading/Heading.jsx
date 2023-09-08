@@ -9,6 +9,7 @@ const Heading = () => {
   const [currentWordIndex, setcurrentWordIndex] = useState(0);
 
   useEffect(() => {
+    
     const interval = setInterval(() => {
       setcurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
     }, 5000);

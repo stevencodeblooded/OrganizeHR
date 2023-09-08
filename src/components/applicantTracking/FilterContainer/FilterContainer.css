@@ -1,5 +1,5 @@
 .bg-filter-form {
-  margin-top: 100px;
+  margin-top: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,8 +19,5 @@
   font-family: "Segoe UI";
   width: 300px;
   margin-right: 2px;
-}
-
-.filter-container input {
-
+  text-align: center;
 }

@@ -36,9 +36,6 @@
     outline: none;
 }
 
-.smooth-advanced {
-    transition: .3s all ease-in-out;
-}
 
 section select {
     width: 300px;
@@ -54,8 +51,8 @@ section select:hover {
 }
 
 .reset-button {
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 500;
     border:none;
     padding: 5px 20px;
     cursor: pointer;
@@ -68,5 +65,4 @@ section select:hover {
 
 .reset-button:hover{
     color: thistle;
-    transform: scale(1.03);
 }

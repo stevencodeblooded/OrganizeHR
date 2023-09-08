@@ -1,6 +1,8 @@
 .leaving-header {
-  color: #007bff;
+  color: #fff;
   font-size: 1.3rem;
   text-align: center;
-  margin-block: 130px 50px;
+  border: none;
+  padding-block: 30px;
+  margin-top: 150px;
 }

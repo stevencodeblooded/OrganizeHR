@@ -1,9 +1,10 @@
 .services-submenu {
-  width: 10rem;
+  width: 190px;
   position: absolute;
-  top: 70px;
+  margin-top: 10px;
   list-style: none;
   text-align: start;
+  border-top: 3px solid #fff;
 }
 
 .services-submenu .clicked {
@@ -18,6 +19,7 @@
 
 .services-submenu li:hover {
   background-color: #317088;
+  padding-left: 30px;
 }
 
 .dropdown-link {

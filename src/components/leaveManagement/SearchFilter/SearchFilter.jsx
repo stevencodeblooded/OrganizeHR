@@ -47,7 +47,7 @@ const SearchFilter = () => {
   }
 
   return (
-    <div className='form-search-filter'>
+    <div className='form-search-filter open'>
       <form onSubmit={handleFormSubmission} className='form-filter'>
 
         <div className='form-elements'>

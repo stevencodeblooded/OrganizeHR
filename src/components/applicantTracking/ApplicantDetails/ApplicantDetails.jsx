@@ -61,9 +61,7 @@ const ApplicantDetails = ({
     };
 
     const updatedApplicants = applicants.map((applicant) => {
-      return applicant.id === selectedApplicant.id
-        ? updatedApplicant
-        : applicant;
+      return applicant.id === selectedApplicant.id ? updatedApplicant : applicant;
     });
 
     setApplicants(updatedApplicants);
@@ -95,9 +93,10 @@ const ApplicantDetails = ({
   const handleChange = (e) => {
     setIsEditing(true);
     setEditedApplicant((prevDetails) => {
+      const {name, value} = e.target
       return {
         ...prevDetails,
-        [e.target.name]: e.target.value,
+        [name]: value,
       };
     });
   };

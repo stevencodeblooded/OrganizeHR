@@ -61,6 +61,11 @@ const Others = ({employee}) => {
             <p>{employee.address}</p>
           </div>
         </div>
+
+        <div className="edit-employee-details">
+          <button onClick={handleEditLeaveApplicant}>Edit</button>
+        </div>
+
       </div>
 
       <div className="employment-details">
@@ -155,14 +160,10 @@ const Others = ({employee}) => {
 
           <div className="leave-balance">
             <h4>Leave Balance:</h4>
-            <p className="detail-value">15</p>
+            <p className="detail-value">{employee.leaveBalance}</p>
           </div>
           
         </div>
-      </div>
-
-      <div className="edit-employee-details">
-        <button onClick={handleEditLeaveApplicant}>Edit Applicant</button>
       </div>
 
       <div className="edit-leave-employee-modal">

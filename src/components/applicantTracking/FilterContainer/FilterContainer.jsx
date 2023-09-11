@@ -5,8 +5,7 @@ import './FilterContainer.css'
 const FilterContainer = (props) => {
 
   const handleInputChange = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
+    const {name, value} = e.target
     props.onFilterChange({ [name]: value });
   };
 

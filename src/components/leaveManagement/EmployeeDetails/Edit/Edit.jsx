@@ -19,7 +19,7 @@ const Edit = ({editedData, handleChange, exitApplicant, setIsEditEmployee}) => {
         <div className='form-edit-leave'>
             <button onClick={exitApplicant}>X</button>
 
-            <h1>Edit Applicant</h1>
+            <h1>Edit Contact Details</h1>
             <div>
                 <input 
                     type='text'
@@ -49,7 +49,7 @@ const Edit = ({editedData, handleChange, exitApplicant, setIsEditEmployee}) => {
                     onChange={handleChange}
                 />
 
-                <div>
+                <div className='btns-edit-leave-employee'>
                     <button onClick={handleSave} type="button">Save</button>
                     <button onClick={handleCancel} type="button">Cancel</button>
                 </div>

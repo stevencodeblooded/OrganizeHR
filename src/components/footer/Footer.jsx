@@ -86,16 +86,16 @@ const Footer = () => {
           
           <ul className="socials">
             <li>
-              <Link to='https://facebook.com' target="_blank" className="social-link"><FontAwesomeIcon icon={faFacebook} /></Link>
+              <Link to='https://facebook.com' target="_blank" className="social-link"><FontAwesomeIcon icon={faFacebook} className="icon-footer-hover" /></Link>
             </li>
             <li>
-              <Link to='https://twitter.com' target="_blank" className="social-link"><FontAwesomeIcon icon={faTwitter} /></Link>
+              <Link to='https://twitter.com' target="_blank" className="social-link"><FontAwesomeIcon icon={faTwitter} className="icon-footer-hover" /></Link>
             </li>
             <li>
-              <Link to='https://github.com' target="_blank" className="social-link"><FontAwesomeIcon icon={faGithub} /></Link>
+              <Link to='https://github.com' target="_blank" className="social-link"><FontAwesomeIcon icon={faGithub} className="icon-footer-hover" /></Link>
             </li>
             <li>
-              <Link to='https://linkedin.com' target="_blank" className="social-link"><FontAwesomeIcon icon={faLinkedin} /></Link>
+              <Link to='https://linkedin.com' target="_blank" className="social-link"><FontAwesomeIcon icon={faLinkedin} className="icon-footer-hover" /></Link>
             </li>
           </ul>
         </section>

@@ -1,0 +1,40 @@
+.not-found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.not-found-contents {
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+.not-found-contents > h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.not-found-contents > p {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.not-found-contents > a {
+    padding: 7px 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: thistle;
+    background-color: #317088;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    transition: .3s all ease-in-out;
+    text-decoration: none;
+}
+
+.not-found-contents > a:hover{
+    color: #f0f0f0;
+}

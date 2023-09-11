@@ -1,0 +1,102 @@
+.login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.login-overlay > div {
+    background-color: #f0f0f0;
+    width: 500px;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.login-overlay > div > h1 {
+    color: #007bff;
+    text-align: center;
+}
+
+.login-form > section {
+    display: grid;
+    margin-bottom: 10px;
+}
+
+.login-form > section > label {
+    font-size: 18px;
+    font-weight: 500;
+    color: #007bff;
+}
+
+.login-form > section > input {
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 5px 10px;
+    outline: none;
+    border: 2px solid #ccc;
+    transition: .3s all ease;
+}
+
+.login-form > section > input:focus {
+    border: 2px solid #007bff;
+}
+
+.login-form > a > p {
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #317088;
+    transition: .3s all ease;
+}
+
+.login-form > a > p:hover {
+    color: #007bff;
+}
+
+.login-exit {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: #317088;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    color: #f0f0f0;
+    transition: .3s all ease-in-out;
+    position: absolute;
+    margin-left: 480px;
+    padding-top: 0px;
+}
+
+.login-exit:hover {
+    color: thistle;
+}
+
+.login-btns {
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+}
+
+.login-btns > button {
+    padding: 4px 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #f0f0f0;
+    background-color: #317088;
+    border-radius: 5px;
+    margin-top: 7px;
+    border: none;
+    transition: .3s all ease-in-out;
+} 
+
+.login-btns > button:hover {
+    color: thistle;
+}

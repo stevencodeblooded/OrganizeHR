@@ -3,6 +3,8 @@ import React, {useState, useEffect} from "react";
 import { NavLink, Link } from "react-router-dom";
 import logo from "../../../images/logoRe.png";
 import Dropdown from "../../dropdown/Dropdown";
+import Login from "../../UserLogin/Login";
+import SignUp from "../../UserLogin/SignUp/SignUp";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faLocation, faMailBulk, faPhone, faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -12,8 +14,17 @@ import { faFacebook, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-
 
 const Nav = () => {
 
-  const [scrolled, setScrolled] = useState(false);
+  //Login
+  const [isLogin, setIsLogin] = useState(false);
+  const [isSignUp, setIsSignUp] = useState(false);
+  
+  const handleLogin = () => setIsLogin(true) 
+  const handleSignUp  = () => setIsSignUp(true)
 
+  console.log(isLogin);
+
+  //scroll
+  const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 100) {
@@ -28,8 +39,8 @@ const Nav = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
   
+  //Nav Dropdown for extra links
   const [dropdown, setDropdown] = useState(false)
-
   const onMouseEnter  = () => setDropdown(true)
   const onMouseLeave  = () => setDropdown(false)
 
@@ -87,14 +98,28 @@ const Nav = () => {
         </ul>
 
         <div className="my-nav-btns">
-          <button className="button-nav" id="login">
+          <button className="button-nav" id="login" onClick={handleLogin}>
             Log In
           </button>
-          <button className="button-nav" id="signin">
+          <button className="button-nav" id="signin" onClick={handleSignUp}>
             Sign Up
           </button>
         </div>
         
+        {/* login */}
+        {isLogin && (
+          <Login 
+            setIsLogin={setIsLogin}
+          />
+        )}
+
+        {/* signup */}
+        {isSignUp && (
+          <SignUp 
+            setIsSignUp={setIsSignUp}
+          />
+        )}
+
       </nav>
 
     </div>

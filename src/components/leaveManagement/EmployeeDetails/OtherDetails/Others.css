@@ -79,6 +79,5 @@
 }
 
 .edit-employee-details > button:hover {
-    color: #007bff;
-    transform: scale(1.);
+    background-color: #2E8B57;
 }

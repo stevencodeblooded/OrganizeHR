@@ -13,6 +13,7 @@ import Services from './container/Services'
 import Employee from './components/leaveManagement/EmployeeDetails/Employee'
 import LoadingSpinner from './components/spinnerLoader/LoadingSpinner'
 import Layout from './container/Layout'
+import NotFound from './components/NotFound/NotFound'
 
 const App = () => {
 
@@ -39,6 +40,7 @@ const App = () => {
               <Route path='Leave-Management' element={<LeaveManagementPage/>} />
               <Route path='Intern-Directory' element={<InternDirectory/>} />
               <Route path='employee/:employeeId' element={<Employee/>} />
+              <Route path='*' element={<NotFound />} />
             </Route>
           </Routes>
       </Router>

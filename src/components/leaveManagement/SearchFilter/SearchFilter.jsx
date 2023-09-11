@@ -109,7 +109,7 @@ const SearchFilter = () => {
             onClick={handleIsAdvanced}
           >
             {
-              isAdvanced ? 'Toggle Search' : 'Advanced Search'
+              isAdvanced ? `Toggle Search` : `Advanced Search`
             }
           </button>
         </div>

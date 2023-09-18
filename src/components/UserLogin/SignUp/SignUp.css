@@ -65,9 +65,10 @@
 .signup-btn-container {
     display: flex;
     justify-content: right;
+    gap: 10px;
 } 
 
-.signup-btn {
+.signup-btn-container > button {
     padding: 4px 8px;
     font-size: 16px;
     font-weight: 500;

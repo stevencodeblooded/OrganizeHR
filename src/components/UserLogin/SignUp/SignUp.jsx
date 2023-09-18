@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 
 import './SignUp.css'
 
-const SignUp = ({setIsSignUp}) => {
+const SignUp = ({setIsSignUp, setIsLogin}) => {
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -27,6 +27,12 @@ const SignUp = ({setIsSignUp}) => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
+    console.log('The Form Data: ', formData);
+  }
+
+  const login = () => {
+    setIsLogin(true)
+    setIsSignUp(false)
   }
 
   return (
@@ -35,7 +41,7 @@ const SignUp = ({setIsSignUp}) => {
         <button type='button' className='signup-exit' onClick={() => setIsSignUp(false)}>X</button>
         <h1>Register</h1>
 
-        <form className='signup-form'>
+        <form className='signup-form' onSubmit={handleSubmit}>
 
           <section>
             <label htmlFor="firstName">First Name</label>
@@ -98,7 +104,8 @@ const SignUp = ({setIsSignUp}) => {
           </section>
 
           <div className='signup-btn-container'>
-            <button type='submit' className='signup-btn' onClick={handleSubmit}>Register</button>
+            <button type='button' onClick={login}>Login</button>
+            <button type='submit' className='signup-btn'>Register</button>
           </div>
 
         </form>

@@ -60,10 +60,11 @@ const Others = ({employee}) => {
             <h4>Address:</h4>
             <p>{employee.address}</p>
           </div>
-        </div>
 
-        <div className="edit-employee-details">
-          <button onClick={handleEditLeaveApplicant}>Edit</button>
+          <div className="edit-employee-details">
+            <button onClick={handleEditLeaveApplicant}>Edit</button>
+          </div>
+
         </div>
 
       </div>

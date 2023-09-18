@@ -110,6 +110,7 @@ const Nav = () => {
         {isLogin && (
           <Login 
             setIsLogin={setIsLogin}
+            setIsSignUp={setIsSignUp}
           />
         )}
 
@@ -117,6 +118,7 @@ const Nav = () => {
         {isSignUp && (
           <SignUp 
             setIsSignUp={setIsSignUp}
+            setIsLogin={setIsLogin}
           />
         )}
 

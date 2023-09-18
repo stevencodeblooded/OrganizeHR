@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 
-import './Login.css'
 import { Link } from 'react-router-dom';
+import './Login.css'
 
-const Login = ({setIsLogin}) => {
+const Login = ({setIsLogin, setIsSignUp}) => {
 
     const [formData, setFormData] = useState({
         email: '',
@@ -23,6 +23,12 @@ const Login = ({setIsLogin}) => {
     const handleSubmit = (e) => {
         e.preventDefault()
 
+        console.log('The Login Form Data', formData);
+    }
+
+    const signUp = () => {
+        setIsLogin(false)
+        setIsSignUp(true)
     }
 
   return (
@@ -32,12 +38,12 @@ const Login = ({setIsLogin}) => {
             
             <h1>Login</h1>
             
-            <form onClick={handleSubmit} className='login-form'>
+            <form onSubmit={handleSubmit} className='login-form'>
 
                 <section>
                     <label htmlFor="email">Email</label>
                     <input 
-                        type="text" 
+                        type="email" 
                         name="email" 
                         id="email"
                         value={formData.email}
@@ -58,10 +64,10 @@ const Login = ({setIsLogin}) => {
                     />
                 </section>
 
-                <Link to=''><p>Forget password? Reset now.</p></Link>
+                <Link to='forgot'><p>Forget password? Reset now.</p></Link>
 
                 <div className='login-btns'>
-                    <button type="submit">Register</button>
+                    <button type="button" onClick={signUp}>Register</button>
                     <button type="submit">Login</button>
                 </div>
 

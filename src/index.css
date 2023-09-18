@@ -15,7 +15,7 @@
   bottom: 0;
 } */
 
-.employee-onboarding,  .intern-directory {
+.employee-onboarding,  .intern-directory, .marketing, .consulting, .error {
   margin-top: 150px;
 }
 

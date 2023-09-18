@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+//Allows us to use data layer APIs eg Loader, etc
+import { RouterProvider ,createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom'
 
 import Home from './container/Home'
 import Contact from './container/Contact'
@@ -12,6 +13,9 @@ import InternDirectory from './container/InternDirectory'
 import Services from './container/Services'
 import Employee from './components/leaveManagement/EmployeeDetails/Employee'
 import LoadingSpinner from './components/spinnerLoader/LoadingSpinner'
+import Marketing from './container/Marketing'
+import Consulting, {loader as consultingLoader} from './container/Consulting'
+import Error from './container/Error'
 import Layout from './container/Layout'
 import NotFound from './components/NotFound/NotFound'
 
@@ -22,28 +26,32 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false)
-    }, 2000)
+    }, 1000)
   }, [])
+
+  const router = createBrowserRouter(createRoutesFromElements(
+    <Route path='/' element={<Layout />}>
+      <Route index element={<Home/>} />
+        <Route path='About' element={<About/>} />
+        <Route path='Contact' element={<Contact/>} />
+        <Route path='Services' element={<Services/>} />
+        <Route path='Applicant-Tracking' element={<ApplicantTrackingPage/>}  />
+        <Route path='Employee-Onboarding' element={<EmployeeOnboarding/>} />
+        <Route path='Leave-Management' element={<LeaveManagementPage/>} />
+        <Route path='Intern-Directory' element={<InternDirectory/>} />
+        <Route path='employee/:employeeId' element={<Employee/>} />
+        <Route path='Marketing' element={<Marketing/>} />
+        <Route path='Consulting' element={<Consulting/>} loader={consultingLoader} errorElement={<Error />} />
+        <Route path='*' element={<NotFound />} />
+    </Route>
+  ))
 
   return (
     <div>
       {isLoading ? <LoadingSpinner /> : (
-        <Router>
-          <Routes>
-            <Route path='/' element={<Layout />}>
-              <Route index element={<Home/>} />
-              <Route path='About' element={<About/>} />
-              <Route path='Contact' element={<Contact/>} />
-              <Route path='Services' element={<Services/>} />
-              <Route path='Applicant-Tracking' element={<ApplicantTrackingPage/>} />
-              <Route path='Employee-Onboarding' element={<EmployeeOnboarding/>} />
-              <Route path='Leave-Management' element={<LeaveManagementPage/>} />
-              <Route path='Intern-Directory' element={<InternDirectory/>} />
-              <Route path='employee/:employeeId' element={<Employee/>} />
-              <Route path='*' element={<NotFound />} />
-            </Route>
-          </Routes>
-      </Router>
+        <RouterProvider 
+          router={router}
+        />
       )}
     </div>
   )

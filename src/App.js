@@ -26,7 +26,7 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false)
-    }, 1000)
+    }, 2000)
   }, [])
 
   const router = createBrowserRouter(createRoutesFromElements(

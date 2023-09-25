@@ -11,8 +11,10 @@
 }
 
 .text-description {
-    font-size: 22px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 500;
+    color: gray;
+    margin-bottom: 13px;
     width: 600px;
 }
 

@@ -1,0 +1,22 @@
+.team {
+    display: flex;
+    justify-content: center;
+}
+
+.team > div  {
+    width: 900px;
+    padding-block: 30px;
+}
+
+.team > div > h2 {
+    margin-bottom: 20px;
+    color: #007bff;
+    font-size: 1.5rem;
+}
+
+.team > div > p {
+    font-size: 16px;
+    font-weight: 500;
+    color: gray;
+    margin-bottom: 13px;
+}

@@ -1,0 +1,23 @@
+.distinction {
+    display: flex;
+    justify-content: center;
+    background-color: #f0f0f0;
+}
+
+.distinction > div  {
+    width: 900px;
+    padding-block: 30px;
+}
+
+.distinction > div > h2 {
+    margin-bottom: 20px;
+    color: #007bff;
+    font-size: 1.5rem;
+}
+
+.distinction > div > p {
+    font-size: 16px;
+    font-weight: 500;
+    color: gray;
+    margin-bottom: 13px;
+}

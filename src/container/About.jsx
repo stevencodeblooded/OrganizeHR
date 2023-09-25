@@ -1,12 +1,21 @@
 import React from 'react'
-
-import Nav from '../components/dashboard/Nav/Nav'
+import Welcome from '../components/About/Welcome/Welcome'
+import Mission from '../components/About/Mission/Mission'
+import Team from '../components/About/Team/Team'
+import Distinction from '../components/About/Distinction/Distinction'
+import Progress from '../components/About/Progress/Progress'
 
 const About = () => {
   return (
-    <div>
-      <Nav />
-      <h1>About Page</h1>
+    <div className='about'>
+      <h1>About Us</h1>
+      <div>
+        <Welcome />
+        <Mission />
+        <Progress />
+        <Team />
+        <Distinction />
+      </div>
     </div>
   )
 }

@@ -1,13 +1,10 @@
 .login-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 60px;
 }
 
 .login-overlay > div {
@@ -15,11 +12,20 @@
     width: 500px;
     border-radius: 15px;
     padding: 30px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .login-overlay > div > h1 {
     color: #007bff;
     text-align: center;
+}
+
+.login-message {
+    color: red;
+    text-align: center;
+    margin-block: 15px;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .login-form > section {
@@ -31,10 +37,11 @@
     font-size: 18px;
     font-weight: 500;
     color: #007bff;
+    margin-bottom: 5px;
 }
 
 .login-form > section > input {
-    border-radius: 10px;
+    border-radius: 7px;
     font-size: 18px;
     padding: 5px 10px;
     outline: none;
@@ -57,34 +64,13 @@
     color: #007bff;
 }
 
-.login-exit {
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    position: fixed;
-    background-color: #317088;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    border: none;
-    color: #f0f0f0;
-    transition: .3s all ease-in-out;
-    position: absolute;
-    margin-left: 480px;
-    padding-top: 0px;
-}
-
-.login-exit:hover {
-    color: thistle;
-}
-
-.login-btns {
+.login-links {
     display: flex;
     justify-content: right;
     gap: 10px;
 }
 
-.login-btns > button {
+.login-links > a {
     padding: 4px 8px;
     font-size: 16px;
     font-weight: 500;
@@ -94,9 +80,29 @@
     border-radius: 5px;
     margin-top: 7px;
     border: none;
+    text-decoration: none;
     transition: .3s all ease-in-out;
 } 
 
-.login-btns > button:hover {
+.login-links > button {
+    padding: 4px 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #f0f0f0;
+    background-color: #317088;
+    border-radius: 5px;
+    margin-top: 7px;
+    border: none;
+    text-decoration: none;
+    transition: .3s all ease-in-out;
+}
+
+.login-links > a:hover {
+    color: thistle;
+}
+
+
+.login-links > button:hover {
     color: thistle;
 }

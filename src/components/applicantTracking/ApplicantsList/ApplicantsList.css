@@ -21,13 +21,13 @@
 }
 
 .applicant-name {
-  color: #317088;
+  color: #007bff;
+  font-weight: 500;
   font-size: 18px;
   transition: 0.3s all ease-in-out;
 }
 
 .applicant-name:hover {
-  color: #007bff;
   text-decoration: underline;
 }
 
@@ -36,4 +36,10 @@
   width: 100px;
   margin-right: 20px;
   border-radius: 5px;
+}
+
+.applicant > div > div > p {
+  font-size: 16px;
+  font-weight: 500;
+  color: gray;
 }

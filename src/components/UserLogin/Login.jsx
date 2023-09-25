@@ -1,44 +1,36 @@
-import React, {useState} from 'react'
+import React from 'react'
 
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams, Form, redirect } from 'react-router-dom';
 import './Login.css'
 
-const Login = ({setIsLogin, setIsSignUp}) => {
+//The action Data Layer API to handle formData
+export async function action ( { request } ) {
+    const formData = await request.formData()
 
-    const [formData, setFormData] = useState({
-        email: '',
-        password: ''
-    });
+    const email = formData.get('email')
+    const password = formData.get('password')
+    console.log(email, password); //login the user 
 
-    const handleChange = (e) => {
-        const {name, value} = e.target
-        setFormData((prevValue) => {
-            return {
-                ...prevValue,
-                [name]: value
-            }
-        })
-    }
+    localStorage.setItem('isLoggedIn', true)
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
+    const pathname = new URL(request.url).searchParams.get('redirectTo') || '/Applicant-Tracking'
+    return redirect(pathname)
+}
 
-        console.log('The Login Form Data', formData);
-    }
+const Login = () => {
 
-    const signUp = () => {
-        setIsLogin(false)
-        setIsSignUp(true)
-    }
+    const [searchParams] = useSearchParams()
+    const message = searchParams.get('message') 
 
   return (
     <div className='login-overlay'>
         <div>
-            <button type='button' className='login-exit' onClick={() => setIsLogin(false)}>X</button>
-            
             <h1>Login</h1>
+
+            { message && <pre className='login-message'>{message}</pre> }
             
-            <form onSubmit={handleSubmit} className='login-form'>
+            {/* the replace prop  => not required to login after clicking back button on browser */}
+            <Form method='post' replace className='login-form'>
 
                 <section>
                     <label htmlFor="email">Email</label>
@@ -46,8 +38,6 @@ const Login = ({setIsLogin, setIsSignUp}) => {
                         type="email" 
                         name="email" 
                         id="email"
-                        value={formData.email}
-                        onChange={handleChange}
                         required
                     />
                 </section>
@@ -58,20 +48,18 @@ const Login = ({setIsLogin, setIsSignUp}) => {
                         type="password" 
                         name="password" 
                         id="password"
-                        value={formData.password}
-                        onChange={handleChange}
                         required
                     />
                 </section>
 
                 <Link to='forgot'><p>Forget password? Reset now.</p></Link>
 
-                <div className='login-btns'>
-                    <button type="button" onClick={signUp}>Register</button>
+                <div className='login-links'>
+                    <Link to='/SignUp' >Register</Link>
                     <button type="submit">Login</button>
                 </div>
 
-            </form>
+            </Form>
         </div>
     </div>
   )

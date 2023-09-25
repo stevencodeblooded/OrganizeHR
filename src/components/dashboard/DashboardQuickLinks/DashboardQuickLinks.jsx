@@ -1,14 +1,11 @@
 import React from 'react'
 
 import { Link } from 'react-router-dom' 
-import { Fade } from "react-reveal";
-
 import './DashboardQuickLinks.css'
 
 const DashboardQuickLinks = () => {
   return (
     <div className='dashboard-quick-links'> 
-        <Fade right duration={2000}>
             <h2>Quick-Links</h2>
             <div className='quick-link-item'>
                 <h3>Applicant Tracking</h3>
@@ -29,7 +26,6 @@ const DashboardQuickLinks = () => {
                 <h3>Intern's Directory</h3>
                 <input type='text' placeholder='Search Interns' />
             </div>
-        </Fade>
     </div>
   )
 }

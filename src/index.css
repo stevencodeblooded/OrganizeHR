@@ -15,11 +15,170 @@
   bottom: 0;
 } */
 
-.employee-onboarding,  .intern-directory, .marketing, .consulting, .error {
+/*------------- All the Reamining -------------  */
+
+.employee-onboarding, 
+.intern-directory, 
+.error {
   margin-top: 150px;
 }
 
-/* Responsiveness */
+/*------------- SERVICES------------- */
+
+.services h1 {
+  text-align: center;
+  font-size: 2.7rem;
+  color: #03687f;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  margin-top: 180px;
+}
+
+.service-components {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.horizontal-service {
+  margin-block: 50px;
+  width: 100px;  
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 7px dotted #007bff;
+}
+
+/*------------- ABOUT PAGE-------------- */
+.about h1 {
+  text-align: center;
+  font-size: 2.7rem;
+  color: #03687f; 
+  margin-bottom: 40px;
+  margin-top: 30px;
+  margin-top: 180px;
+}
+
+/*------------- CONTACT PAGE------------- */
+
+.contact h1 {
+  text-align: center;
+  font-size: 2.7rem;
+  color: #03687f; 
+  padding-top: 180px;
+}
+
+.contact-form {
+  display: flex;
+  align-items: center;
+  margin: 50px auto;
+  width: 900px;
+}
+
+.contact-form > div > p {
+    font-size: 16px;
+    font-weight: 500;
+    color: gray;
+    margin-bottom: 30px;
+}
+
+.contact-form > div > img {
+  width: 370px;
+  border-radius: 7px;
+}
+
+.contact-inputs {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+} 
+.contact-inputs > h2 {
+  text-align: center;
+  color: #007bff;
+  font-size: 1.5rem;  
+  margin-bottom: 20px;
+}
+
+.contact-inputs > section {
+  display: flex;
+  column-gap: 10px;
+} 
+
+.contact-inputs > section> input {
+  padding: 7px;
+  width: 246px;
+  border: 2px solid #b0c4de;
+  color: #054146;
+  background-color: #b0c4de;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: .3s all ease-in-out;
+}
+
+.contact-inputs > section> input:focus {
+  outline: none;
+  border: 2px solid #007bff;
+}
+
+.contact-inputs > textarea {
+  margin-block: 10px;
+  padding: 7px;
+  border: 2px solid #b0c4de;
+  height: 100px;
+  transition: .3s all ease-in-out;
+}
+
+.contact-inputs > textarea:focus {
+  outline: none;
+  border: 2px solid #007bff;
+}
+
+.contact-btn {
+  padding-block: 7px;
+  font-size: 19px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #f0f0f0;
+  background-color: #317088;
+  border: none;
+  border-radius: 5px;
+  transition: .3s all ease-in-out;
+}
+
+.contact-btn:hover {
+  color: thistle;
+}
+
+.container-hours-location {
+  display: flex;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+.hours-location {
+  width: 900px;
+  display: flex;
+  justify-content: space-evenly;
+  padding-block: 30px;
+}
+
+.hours-location > div > h3 {
+  margin-bottom: 20px;
+  color: #007bff;
+  font-size: 1.5rem;
+}
+
+.hours-location > div > ul > li {
+  list-style: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: gray;
+}
+
+
+/*------------- Responsiveness -------------*/
 @media (max-width: 768px) {
   
 }

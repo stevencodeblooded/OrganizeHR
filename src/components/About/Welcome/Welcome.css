@@ -1,0 +1,23 @@
+.welcome {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+}
+
+.welcome > div  {
+    width: 900px;
+    padding-block: 30px;
+}
+
+.welcome > div > h2 {
+    margin-bottom: 20px;
+    color: #007bff;
+    font-size: 1.5rem;
+}
+
+.welcome > div > p {
+    font-size: 16px;
+    font-weight: 500;
+    color: gray;
+    margin-bottom: 13px;
+}

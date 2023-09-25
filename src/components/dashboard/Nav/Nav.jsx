@@ -3,8 +3,6 @@ import React, {useState, useEffect} from "react";
 import { NavLink, Link } from "react-router-dom";
 import logo from "../../../images/logoRe.png";
 import Dropdown from "../../dropdown/Dropdown";
-import Login from "../../UserLogin/Login";
-import SignUp from "../../UserLogin/SignUp/SignUp";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faLocation, faMailBulk, faPhone, faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -14,16 +12,8 @@ import { faFacebook, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-
 
 const Nav = () => {
 
-  //Login
-  const [isLogin, setIsLogin] = useState(false);
-  const [isSignUp, setIsSignUp] = useState(false);
-  
-  const handleLogin = () => setIsLogin(true) 
-  const handleSignUp  = () => setIsSignUp(true)
+  const isLoggedIn = localStorage.getItem('isLoggedIn')
 
-  console.log(isLogin);
-
-  //scroll
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -43,6 +33,9 @@ const Nav = () => {
   const [dropdown, setDropdown] = useState(false)
   const onMouseEnter  = () => setDropdown(true)
   const onMouseLeave  = () => setDropdown(false)
+  //logOut User
+  const handleLogOut  = () => localStorage.removeItem('isLoggedIn')
+  
 
   return (
     <div className="navbar-full-container">
@@ -73,54 +66,55 @@ const Nav = () => {
       </div>
 
         <nav className='nav-container'>
-          <NavLink to='.'>
+          <NavLink to='/'>
             <img src={logo} alt="logo" className="logo" />
           </NavLink>
 
         <ul className="nav-links"> 
           <li>
-            <NavLink to='Applicant-Tracking' className={({isActive}) => isActive ? 'active-Link' : null} >Applicant Tracking</NavLink>
+            <NavLink to='/' className={({isActive}) => isActive ? 'active-Link' : null} >Home</NavLink>
           </li>
 
           <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >
-            <NavLink to='Employee-Onboarding' className={({isActive}) => isActive ? 'active-Link' : null} >Employee Onboarding <FontAwesomeIcon className="dropIcon" icon={faAngleDown}/></NavLink>
+            <p className="hr-managt-item">HR Management <FontAwesomeIcon className="dropIcon" icon={faAngleDown}/></p>
             { dropdown && <Dropdown /> }   
           </li>
 
           <li>
-            <NavLink to='Leave-Management' className={({isActive}) => isActive ? 'active-Link' : null} >Leave Management</NavLink>
+            <NavLink to='Services' className={({isActive}) => isActive ? 'active-Link' : null} >Services</NavLink>
           </li>
 
           <li>
-            <NavLink to='Intern-Directory' className={({isActive}) => isActive ? 'active-Link' : null} >Intern Directory</NavLink>
+            <NavLink to='About' className={({isActive}) => isActive ? 'active-Link' : null} >About Us</NavLink>
+          </li>
+
+          <li>
+            <NavLink to='Contact' className={({isActive}) => isActive ? 'active-Link' : null} >Contact Us</NavLink>
           </li>
           
         </ul>
 
-        <div className="my-nav-btns">
-          <button className="button-nav" id="login" onClick={handleLogin}>
-            Log In
-          </button>
-          <button className="button-nav" id="signin" onClick={handleSignUp}>
-            Sign Up
-          </button>
-        </div>
-        
-        {/* login */}
-        {isLogin && (
-          <Login 
-            setIsLogin={setIsLogin}
-            setIsSignUp={setIsSignUp}
-          />
-        )}
+        <div className="my-nav-links">
+          
+          {
+            !isLoggedIn ? (
+              <Link to='Login' className="link-nav" id="login">
+                Log In
+              </Link>
+            ) : (
+              <button onClick={handleLogOut} className="link-nav" id="login" >Log Out</button>
+            )
+          }
 
-        {/* signup */}
-        {isSignUp && (
-          <SignUp 
-            setIsSignUp={setIsSignUp}
-            setIsLogin={setIsLogin}
-          />
-        )}
+          <Link 
+            to='SignUp' 
+            className={isLoggedIn ? 'cursor-disabled link-nav' : 'link-nav'} 
+            id="signin"
+          >
+            Sign Up
+          </Link>
+          
+        </div>
 
       </nav>
 

@@ -5,9 +5,9 @@ import DashboardNotifications from "../DashboardNotifications/DashboardNotificat
 import Heading from "../Heading/Heading";
 import DashboardUpdates from "../DashboardUpdates/DashboardUpdates";
 import DashboardQuickLinks from "../DashboardQuickLinks/DashboardQuickLinks";
+import Description from "../Description/Description";
 
 import './Dashboard.css'
-import Description from "../Description/Description";
 
 const Dashboard = () => {
   return (

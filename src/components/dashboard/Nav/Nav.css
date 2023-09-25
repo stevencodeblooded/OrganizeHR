@@ -51,7 +51,7 @@
     color: white;
     margin-right: 25px;
     transition: 0.3s all ease-in-out;
-    padding: 5px;
+    padding: 5px ;
     height: 20px;
     font-weight: 600;
   }
@@ -62,14 +62,34 @@
     color: thistle;
   }
   
-  .button-nav {
+  .hr-managt-item {
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+    padding: 5px;
+    cursor: default;
+    transition: 0.3s all ease-in-out;
+  }
+
+  .hr-managt-item:hover {
+    background-color: #317088;
+    border-radius: 6px;
+    color: thistle;
+  }
+
+  .link-nav {
     padding: 7px 20px;
     border-radius: 10px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
     border: none;
+    text-decoration: none;
     transition: 0.3s all ease-in-out;
+  }
+
+  .cursor-disabled {
+    cursor: not-allowed;
   }
   
   #login {
@@ -94,7 +114,7 @@
     transform: scale(1.05);
   }
 
-  .my-nav-btns {
+  .my-nav-links {
     padding-right: 15px;
     display: flex;
     column-gap: 10px;

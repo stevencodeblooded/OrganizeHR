@@ -1,21 +1,20 @@
 import React, { useState, useEffect } from 'react'
 
-//Allows us to use data layer APIs eg Loader, etc
+//Allows us to use data layer APIs eg loader, errorElement etc
 import { RouterProvider ,createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom'
 
 import Home from './container/Home'
-import Contact from './container/Contact'
+import Contact, { action as contactAction } from './container/Contact'
 import About from './container/About'
-import ApplicantTrackingPage from './container/ApplicantTrackingPage'
-import EmployeeOnboarding from './container/EmployeeOnboarding'
-import LeaveManagementPage from './container/LeaveManagementPage'
-import InternDirectory from './container/InternDirectory'
 import Services from './container/Services'
-import Employee from './components/leaveManagement/EmployeeDetails/Employee'
+import Login, { action as loginAction } from './components/UserLogin/Login'
+import SignUp, { action as signUpAction} from './components/UserLogin/SignUp/SignUp'
+import ApplicantTrackingPage, { loader as applicantTrackingLoader } from './container/ApplicantTrackingPage'
+import EmployeeOnboarding ,{ loader as employeeBoarding} from  './container/EmployeeOnboarding'
+import LeaveManagementPage, { loader as leaveManagementLoader} from './container/LeaveManagementPage'
+import InternDirectory, { loader as internDirectoryLoader} from './container/InternDirectory'
+import Employee, { loader as employeeLoader } from './components/leaveManagement/EmployeeDetails/Employee'
 import LoadingSpinner from './components/spinnerLoader/LoadingSpinner'
-import Marketing from './container/Marketing'
-import Consulting, {loader as consultingLoader} from './container/Consulting'
-import Error from './container/Error'
 import Layout from './container/Layout'
 import NotFound from './components/NotFound/NotFound'
 
@@ -30,20 +29,66 @@ const App = () => {
   }, [])
 
   const router = createBrowserRouter(createRoutesFromElements(
-    <Route path='/' element={<Layout />}>
-      <Route index element={<Home/>} />
+      <Route path='/' element={<Layout />}>
+        <Route index element={<Home/>} />
         <Route path='About' element={<About/>} />
-        <Route path='Contact' element={<Contact/>} />
+
+        <Route 
+          path='Contact' 
+          element={<Contact/>} 
+          action={contactAction}
+        />
+
         <Route path='Services' element={<Services/>} />
-        <Route path='Applicant-Tracking' element={<ApplicantTrackingPage/>}  />
-        <Route path='Employee-Onboarding' element={<EmployeeOnboarding/>} />
-        <Route path='Leave-Management' element={<LeaveManagementPage/>} />
-        <Route path='Intern-Directory' element={<InternDirectory/>} />
-        <Route path='employee/:employeeId' element={<Employee/>} />
-        <Route path='Marketing' element={<Marketing/>} />
-        <Route path='Consulting' element={<Consulting/>} loader={consultingLoader} errorElement={<Error />} />
-        <Route path='*' element={<NotFound />} />
-    </Route>
+
+        <Route 
+          path='Login' 
+          element={<Login />} 
+          action={loginAction}
+        />
+
+        <Route 
+          path='SignUp' 
+          element={<SignUp />} 
+          action={signUpAction} 
+        />
+
+        <Route 
+          path='Applicant-Tracking' 
+          element={<ApplicantTrackingPage/>}
+          loader={applicantTrackingLoader}
+        />
+
+        <Route 
+          path='Employee-Onboarding' 
+          element={<EmployeeOnboarding/>}
+          loader={employeeBoarding}
+        />
+
+        <Route 
+          path='Leave-Management' 
+          element={<LeaveManagementPage/>} 
+          loader={leaveManagementLoader}
+        />
+
+        <Route 
+          path='Intern-Directory' 
+          element={<InternDirectory/>}
+          loader={internDirectoryLoader}
+        />
+
+        <Route 
+          path='employee/:employeeId' 
+          element={<Employee/>}
+          loader={employeeLoader}
+        />
+
+        <Route 
+          path='*' 
+          element={<NotFound />} 
+        />
+
+      </Route>
   ))
 
   return (

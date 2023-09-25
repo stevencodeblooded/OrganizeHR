@@ -6,8 +6,13 @@ import allEmployees from '../../../mockData/employeesList'
 import EmployeInfo from './EmployeeInfo/EmployeInfo'
 import loading from '../../../images/loading.png'
 import Others from "./OtherDetails/Others";
+import { authRequired } from "../../utils/AuthRequired";
 
 import "./Employee.css";
+
+export async function loader ({ request }) {
+  return await authRequired(request)
+}
 
 const Employee = () => {
   const { employeeId } = useParams();

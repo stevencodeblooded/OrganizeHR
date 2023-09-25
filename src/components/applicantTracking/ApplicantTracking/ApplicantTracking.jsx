@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 
 import ApplicantsList from "../ApplicantsList/ApplicantsList";
+//Replace the mock data with the fetch from api.js
 import applicantsList from "../../../mockData/applicantsList";
 import ApplicantDetails from "../ApplicantDetails/ApplicantDetails";
 import FilterContainer from "../FilterContainer/FilterContainer";
@@ -9,8 +10,7 @@ import './ApplicantTracking.css'
 
 const ApplicantTracking = () => {
 
-  console.log(applicantsList);
-  
+  // console.log(applicantsList);
   const [selectedApplicant, setSelectedApplicant] = useState(null);
 
   const [filterCriteria, setFilterCriteria] = useState({

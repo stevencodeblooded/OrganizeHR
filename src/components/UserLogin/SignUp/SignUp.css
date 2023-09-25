@@ -1,13 +1,11 @@
 .signup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 150px;
+
 }
 
 .signup-overlay > div {
@@ -15,31 +13,12 @@
     width: 500px;
     border-radius: 15px;
     padding: 30px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .signup-overlay > div > h1 {
     color: #007bff;
     text-align: center;
-}
-
-.signup-exit {
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    background-color: #317088;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    border: none;
-    color: #f0f0f0;
-    position: absolute;
-    margin-left: 480px;
-    padding-top: 0px;
-    transition: .3s all ease-in-out;
-}
-
-.signup-exit:hover {
-    color: thistle;
 }
 
 .signup-form > section {
@@ -51,15 +30,20 @@
     font-size: 18px;
     font-weight: 500;
     color: #007bff;
+    margin-bottom: 5px;
 }
 
 .signup-form > section > input {
-    border-radius: 10px;
+    border-radius: 7px;
     font-size: 18px;
     padding: 5px 10px;
     outline: none;
     border: 2px solid #ccc;
     transition: .3s all ease;
+}
+
+.signup-form > section > input:focus {
+    border: 2px solid #007bff;
 }
 
 .signup-btn-container {
@@ -81,6 +65,25 @@
     border: none;
     transition: .3s all ease-in-out;
 } 
+
+.signup-btn-container > a {
+    padding: 4px 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #f0f0f0;
+    background-color: #317088;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 7px;
+    border: none;
+    text-decoration: none;
+    transition: .3s all ease-in-out;
+}
+
+.signup-btn-container > a:hover {
+    color: thistle;
+}
 
 .signup-btn:hover {
     color: thistle;

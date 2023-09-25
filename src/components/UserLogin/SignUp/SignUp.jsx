@@ -1,47 +1,33 @@
-import React, {useState} from 'react'
+import React from 'react'
 
+import { Link, Form, redirect } from 'react-router-dom';
 import './SignUp.css'
 
-const SignUp = ({setIsSignUp, setIsLogin}) => {
+export async function action ( {request} ) {
+  const formData = await request.formData()
 
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-    repeatPassword: '',
-  });
+  const firstName = formData.get('firstName')
+  const lastName = formData.get('lastName')
+  const email = formData.get('email')
+  const password = formData.get('password')
+  const repeatPassword = formData.get('repeatPassword')
 
-  const handleChange = (e) => {
-    const {name, value} = e.target
-    setFormData((prevValue) => {
-      return {
-        ...prevValue,
-        [name]: value
-      }
-    })
-  }
+  console.log(firstName, lastName, email, password, repeatPassword);
 
-  console.log(formData);
+  localStorage.setItem('isLoggedIn', true)
+  const pathname = new URL(request.url).searchParams.get('redirectTo') || '/Applicant-Tracking'
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
+  return redirect(pathname)
+}
 
-    console.log('The Form Data: ', formData);
-  }
-
-  const login = () => {
-    setIsLogin(true)
-    setIsSignUp(false)
-  }
+const SignUp = () => {
 
   return (
     <div className='signup-overlay'>
       <div>
-        <button type='button' className='signup-exit' onClick={() => setIsSignUp(false)}>X</button>
         <h1>Register</h1>
 
-        <form className='signup-form' onSubmit={handleSubmit}>
+        <Form method='post' replace className='signup-form'>
 
           <section>
             <label htmlFor="firstName">First Name</label>
@@ -49,8 +35,6 @@ const SignUp = ({setIsSignUp, setIsLogin}) => {
               id='firstName'
               type="text" 
               name='firstName'
-              value={formData.firstName}
-              onChange={handleChange}
               required
             />
           </section>
@@ -61,8 +45,6 @@ const SignUp = ({setIsSignUp, setIsLogin}) => {
               id='lastName'
               type="text" 
               name='lastName'
-              value={formData.lastName}
-              onChange={handleChange}
               required
             />
           </section>
@@ -73,8 +55,6 @@ const SignUp = ({setIsSignUp, setIsLogin}) => {
               id='email' 
               type="email" 
               name='email'
-              value={formData.email}
-              onChange={handleChange}
               required
             />
           </section>
@@ -85,8 +65,6 @@ const SignUp = ({setIsSignUp, setIsLogin}) => {
               id='password' 
               type="password" 
               name='password'
-              value={formData.password} 
-              onChange={handleChange}
               required
             />
           </section>
@@ -97,18 +75,16 @@ const SignUp = ({setIsSignUp, setIsLogin}) => {
               id='repeatPassword'
               type="password" 
               name='repeatPassword'
-              value={formData.repeatPassword} 
-              onChange={handleChange}
               required
             />
           </section>
 
           <div className='signup-btn-container'>
-            <button type='button' onClick={login}>Login</button>
+            <Link to='/login' >Login</Link>
             <button type='submit' className='signup-btn'>Register</button>
           </div>
 
-        </form>
+        </Form>
       </div>
     </div>
   )

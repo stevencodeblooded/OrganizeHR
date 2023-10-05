@@ -21,7 +21,6 @@ const Consulting = () => {
             <p>
               Performance Management: Strategies to enhance employee performance and engagement.
             </p>
-
         </div>
 
         <img src={consultingImage} alt="consulting" className='service-image'/>

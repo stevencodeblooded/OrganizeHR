@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-//Allows us to use data layer APIs eg loader, errorElement etc
+//Allows us to use data layer APIs eg loader(Data Fetching), errorElement(errorHandling), actions(Form), etc
 import { RouterProvider ,createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom'
 
 import Home from './container/Home'
@@ -12,11 +12,11 @@ import SignUp, { action as signUpAction} from './components/UserLogin/SignUp/Sig
 import ApplicantTrackingPage, { loader as applicantTrackingLoader } from './container/ApplicantTrackingPage'
 import EmployeeOnboarding ,{ loader as employeeBoarding} from  './container/EmployeeOnboarding'
 import LeaveManagementPage, { loader as leaveManagementLoader} from './container/LeaveManagementPage'
-import InternDirectory, { loader as internDirectoryLoader} from './container/InternDirectory'
 import Employee, { loader as employeeLoader } from './components/leaveManagement/EmployeeDetails/Employee'
 import LoadingSpinner from './components/spinnerLoader/LoadingSpinner'
 import Layout from './container/Layout'
 import NotFound from './components/NotFound/NotFound'
+import Error from './container/Error'
 
 const App = () => {
 
@@ -57,30 +57,28 @@ const App = () => {
           path='Applicant-Tracking' 
           element={<ApplicantTrackingPage/>}
           loader={applicantTrackingLoader}
+          errorElement={<Error />}
         />
 
         <Route 
           path='Employee-Onboarding' 
           element={<EmployeeOnboarding/>}
           loader={employeeBoarding}
+          errorElement={<Error />}
         />
 
         <Route 
           path='Leave-Management' 
           element={<LeaveManagementPage/>} 
           loader={leaveManagementLoader}
-        />
-
-        <Route 
-          path='Intern-Directory' 
-          element={<InternDirectory/>}
-          loader={internDirectoryLoader}
+          errorElement={<Error />}
         />
 
         <Route 
           path='employee/:employeeId' 
           element={<Employee/>}
           loader={employeeLoader}
+          errorElement={<Error />}
         />
 
         <Route 

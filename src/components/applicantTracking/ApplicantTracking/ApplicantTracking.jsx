@@ -1,16 +1,16 @@
-import React, {useState} from "react";
+import React, {useState, Suspense } from "react";
+
+import { Await } from "react-router-dom";
 
 import ApplicantsList from "../ApplicantsList/ApplicantsList";
-//Replace the mock data with the fetch from api.js
-import applicantsList from "../../../mockData/applicantsList";
+// import applicantsList from "../../../mockData/applicantsList"; //To be removed later and add the prop(applcants) 
 import ApplicantDetails from "../ApplicantDetails/ApplicantDetails";
 import FilterContainer from "../FilterContainer/FilterContainer";
 
 import './ApplicantTracking.css'
 
-const ApplicantTracking = () => {
+const ApplicantTracking = ({ applicants }) => {
 
-  // console.log(applicantsList);
   const [selectedApplicant, setSelectedApplicant] = useState(null);
 
   const [filterCriteria, setFilterCriteria] = useState({
@@ -19,8 +19,7 @@ const ApplicantTracking = () => {
     status: "",
   });
 
-  //navigation
-  const [applicants, setApplicants] = useState(applicantsList)
+  // const [applicants, setApplicants] = useState(applicantsList)
   const [selectedApplicantIndex, setSelectedApplicantIndex] = useState(0)
 
   const goBack = () => {
@@ -61,7 +60,7 @@ const ApplicantTracking = () => {
     setSelectedApplicant(null);
   };
 
-  const filteredApplicantsData = applicantsList.filter((applicant)  => {
+  const filteredApplicantsData = applicants.filter((applicant)  => {
     
     const jobPositionFilter = filterCriteria.jobPosition.toLowerCase()
     const applicationDateFilter = filterCriteria.applicationDate
@@ -89,7 +88,7 @@ const ApplicantTracking = () => {
       return applicant.id !== applicantId
     })
 
-    setApplicants(updatedApplicants)
+    // setApplicants(updatedApplicants)
     setSelectedApplicant(null)
   }
 
@@ -100,9 +99,15 @@ const ApplicantTracking = () => {
         onFilterChange={handleFilterChange} 
       />
 
-      <div className="all-applicants">
-          {applicantsData}
-      </div>
+      <section>
+        <Suspense fallback={<h1>Loading the Applicants...</h1>}>
+          <Await resolve={applicants}>
+            <div className="all-applicants">
+              {applicantsData}
+            </div>
+          </Await>
+        </Suspense>
+      </section>
 
       <ApplicantDetails
         selectedApplicant={selectedApplicant}
@@ -111,7 +116,7 @@ const ApplicantTracking = () => {
         goNext={goNext}
         selectedApplicantIndex={selectedApplicantIndex}
         applicants={applicants}
-        setApplicants={setApplicants}
+        // setApplicants={setApplicants}
         onDelete={handleApplicantDelete}
       />
 

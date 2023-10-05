@@ -9,9 +9,9 @@ export async function action ( { request } ) {
 
     const email = formData.get('email')
     const password = formData.get('password')
-    console.log(email, password); //login the user 
+    console.log({ email, password }); //user data  
 
-    localStorage.setItem('isLoggedIn', true)
+    localStorage.setItem('isLoggedIn', true) //login the user
 
     const pathname = new URL(request.url).searchParams.get('redirectTo') || '/Applicant-Tracking'
     return redirect(pathname)

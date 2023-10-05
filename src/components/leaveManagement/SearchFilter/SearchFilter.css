@@ -66,3 +66,18 @@ section select:hover {
 .reset-button:hover{
     color: thistle;
 }
+
+@media only screen and (max-width: 900px) {
+    .form-filter {
+        width: 100%;
+        padding-inline: 20px;
+    }
+
+    .form-elements > section input {
+        width: 100%;
+    }
+
+    section select {
+        width: 50%;
+    }
+}

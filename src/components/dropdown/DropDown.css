@@ -7,7 +7,7 @@
   border-top: 3px solid #fff;
 }
 
-.services-submenu .clicked {
+.clicked {
   display: none;
 }
 
@@ -32,4 +32,33 @@
 
 .dropdown-link:hover {
   color: thistle;
+
+}
+
+/* @media only screen and (max-width: 760px) { */
+@media only screen and (max-width: 1200px) {
+  .services-submenu {
+    position: relative;
+    list-style: none;
+    right: 0;
+    width: 80%;
+    margin-top: 0px;
+    border: 2px solid #162;
+    border-radius: 7px;
+    padding-left: 12px;
+  }
+
+  .services-submenu li {
+    background-color: #317088;
+  }
+
+  .services-submenu li:hover {
+    padding-left: 10px;
+  }
+
+  .dropdown-link {
+    width: 80%;
+    height: 0%;
+  }
+
 }

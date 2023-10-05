@@ -16,11 +16,5 @@ export const MenuItems = [
         title: 'Leave Management',
         path: '/Leave-Management',
         className: 'dropdown-link'
-    },
-    {
-        id: 4,
-        title: 'Intern Directory',
-        path: '/Intern-Directory',
-        className: 'dropdown-link'
-    },
+    }
 ]

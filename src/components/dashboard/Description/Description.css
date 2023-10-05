@@ -28,3 +28,27 @@
     border-radius: 50%;
     border: none;
 }
+
+@media only screen and (max-width: 760px) {
+  
+    .decription-container {
+        flex-direction: column;
+        margin-block: 40px;
+    }
+
+    .text-description { 
+        text-align: left;
+        width: 100%;
+    }
+
+.description-image {
+    width: 350px;
+}
+
+.description-image-2 {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+    
+}

@@ -1,17 +1,24 @@
 import React from 'react'
 
+import { useLoaderData } from 'react-router-dom'
 import ApplicantTracking from '../components/applicantTracking/ApplicantTracking/ApplicantTracking'
+import { getApplicants } from '../components/utils/api'
 import { authRequired } from '../components/utils/AuthRequired'
 
+
 export async function loader ({ request }) {
-  return await authRequired(request)
+  await authRequired(request)
+  const applicantsPromise = getApplicants()
+  return applicantsPromise
 }
 
 const ApplicantTrackingPage = () => {
+  const applicantsList = useLoaderData()
 
   return (
     <div>
-        <ApplicantTracking />
+        {/* pass the applicants as prop */}  
+        <ApplicantTracking applicants={applicantsList} />
     </div>
   )
 }

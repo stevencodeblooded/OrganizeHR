@@ -32,11 +32,11 @@ const Contact = () => {
         <Form method='post' className='contact-inputs'>
           <h2>Send Us a Message</h2>
           <section>
-            <input type="text" name="fname"  placeholder='first name'/>
-            <input type="text" name="lname" placeholder='last name' />
+            <input type="text" name="fname"  placeholder='first name' required/>
+            <input type="text" name="lname" placeholder='last name' required/>
           </section>
           
-          <textarea name="message" placeholder='enter message'></textarea>
+          <textarea name="message" placeholder='enter message' required></textarea>
           <input type="submit" value="Send Message" className='contact-btn' />
 
         </Form>

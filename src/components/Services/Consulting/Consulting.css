@@ -27,3 +27,18 @@
     border-radius:15px;
     border: none;
 }
+
+@media only screen and (max-width: 768px) {
+    .service {
+        flex-direction: column;
+        width: 80%;
+        margin-inline: 20px;
+        background-color: #f0f0f0;
+        border-radius:15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .service > div {
+        padding: 7px;
+    }
+}

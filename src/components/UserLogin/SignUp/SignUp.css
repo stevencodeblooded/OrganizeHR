@@ -88,3 +88,9 @@
 .signup-btn:hover {
     color: thistle;
 }
+
+@media only screen and (max-width: 600px) {
+    .signup-overlay > div {
+        width: 70%;
+    }
+}

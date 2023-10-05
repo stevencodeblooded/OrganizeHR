@@ -12,9 +12,9 @@ export async function action ( {request} ) {
   const password = formData.get('password')
   const repeatPassword = formData.get('repeatPassword')
 
-  console.log(firstName, lastName, email, password, repeatPassword);
+  console.log({ firstName, lastName, email, password, repeatPassword }); //user sign up data
 
-  localStorage.setItem('isLoggedIn', true)
+  localStorage.setItem('isLoggedIn', true) //login the user
   const pathname = new URL(request.url).searchParams.get('redirectTo') || '/Applicant-Tracking'
 
   return redirect(pathname)

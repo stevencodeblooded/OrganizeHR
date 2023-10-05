@@ -1,31 +1,33 @@
-.welcome {
-    background-color: #f0f0f0;
+.checklist {
     display: flex;
     justify-content: center;
 }
 
-.welcome > div  {
+.checklist > div  {
     width: 900px;
     padding-block: 30px;
 }
 
-.welcome > div > h2 {
+.checklist > div > h2 {
     margin-bottom: 20px;
     color: #007bff;
     font-size: 1.5rem;
 }
 
-.welcome > div > p {
+.checklist > div >  ul > li {
     font-size: 16px;
     font-weight: 500;
     color: gray;
     margin-bottom: 13px;
 }
 
+.checklist > div >  ul > li::marker {
+    color: #007bff;
+}
 
-@media only screen and (max-width: 900px) {
-    .welcome > div  {
+@media only screen and (max-width: 950px) {
+    .checklist > div  {
         width: 100%;
-        padding-inline: 30px;
+        padding-inline: 40px;
     }
 }

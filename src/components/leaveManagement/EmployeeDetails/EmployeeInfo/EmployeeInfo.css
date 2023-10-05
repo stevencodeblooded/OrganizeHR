@@ -22,3 +22,10 @@
 .employee-info p {
     font-weight: 600;
 }
+
+@media only screen and (max-width: 700px) {
+    .employee-profile {
+        width: 100px;
+        height: 100px;
+    }
+}

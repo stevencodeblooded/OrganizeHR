@@ -1,0 +1,36 @@
+.headTitle {
+    display: flex;
+    justify-content: center;
+    background-color: #f0f0f0;
+}
+
+.headTitle > div  {
+    width: 900px;
+    padding-bottom: 30px;
+}
+
+.headTitle > div > h1 {
+    text-align: center;
+    font-size: 2.7rem;
+    color: #03687f; 
+    margin-bottom: 40px;
+    margin-top: 30px;
+    margin-top: 180px;
+}
+
+.headTitle > div > p {
+    font-size: 16px;
+    font-weight: 500;
+    color: gray;
+    margin-bottom: 13px;
+}
+
+@media only screen and (max-width: 900px) {
+    .headTitle > div  {
+        width: 100%;
+    }
+
+    .headTitle > div > p  {
+        padding-inline: 20px;
+    }
+}

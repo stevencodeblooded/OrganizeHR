@@ -17,9 +17,9 @@
 
 /*------------- All the Reamining -------------  */
 
-.employee-onboarding, 
 .intern-directory, 
-.error {
+.error,
+.test {
   margin-top: 150px;
 }
 
@@ -34,12 +34,58 @@
   margin-top: 180px;
 }
 
+  
 .service-components {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+.service {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+} 
+/* 
+.arrow {
+  position: absolute;
+  font-size: 30px;
+  color: #007bff;
+  cursor: pointer;
+  transition: .3s all ease-in-out;
+}
+
+.arrow:hover {
+  color: #03687f;
+}
+
+.arrow-right {
+  right: 1rem;
+}
+
+.arrow-left {
+  left: 1rem;
+}
+
+.indicators {
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+}
+
+.indicator {
+  background-color: #007bff;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-inline: 4px; 
+} */
 
 .horizontal-service {
   margin-block: 50px;
@@ -48,7 +94,7 @@
   border-left: none;
   border-right: none;
   border-bottom: 7px dotted #007bff;
-}
+} 
 
 /*------------- ABOUT PAGE-------------- */
 .about h1 {
@@ -59,6 +105,7 @@
   margin-top: 30px;
   margin-top: 180px;
 }
+
 
 /*------------- CONTACT PAGE------------- */
 
@@ -93,6 +140,7 @@
   flex-direction: column;
   width: 500px;
 } 
+
 .contact-inputs > h2 {
   text-align: center;
   color: #007bff;
@@ -177,6 +225,39 @@
   color: gray;
 }
 
+@media only screen and (max-width: 900px) {
+  .contact-form {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .contact-form > div {
+  margin-bottom: 30px;
+  padding-inline: 20px;
+  }
+  
+  .contact-inputs {
+    width: 80%;
+  } 
+  
+  .contact-inputs > section> input {
+    width: 100%;
+  }
+}
+
+
+@media only screen and (max-width: 400px) {
+  .hours-location {
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-block: 30px;
+    padding-inline: 20px;
+  }
+}
+/* -----------------Employee Onboarding----------------- */
+  
 
 /*------------- Responsiveness -------------*/
 @media (max-width: 768px) {

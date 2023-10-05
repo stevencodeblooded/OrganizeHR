@@ -1,31 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { MenuItems } from "./MenuItems";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import './DropDown.css'
 
-const Dropdown = () => {
+const Dropdown = ({dropdown, showingLinks, setShowingLinks}) => {
 
-    const [dropdown, setDropdown] = useState(false)
-
-    const handleDropdown = () => setDropdown(!dropdown)
+  const activeLink = {
+    backgroundColor: '#054146',
+    borderRadius: '6px'
+  }
 
   return (
-    <ul className={ dropdown ? "services-submenu clicked" : "services-submenu" } onClick={handleDropdown}>
+    <ul className={ dropdown ? "services-submenu clicked" : "services-submenu" } >
       {MenuItems.map((item) => {
         return (
           <li key={item.id}>
             
-            <Link 
+            <NavLink 
               to={item.path} 
-              className={item.className} 
-              onClick={() => setDropdown(false) }
+              className={item.className}
+              style={({isActive}) => isActive ? activeLink : null }
+              onClick={() => setShowingLinks(false)}
             > 
-            
               { item.title }
 
-            </Link>
+            </NavLink>
           </li>
         );
       })}

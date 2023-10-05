@@ -5,14 +5,30 @@ import logo from "../../../images/logoRe.png";
 import Dropdown from "../../dropdown/Dropdown";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown, faLocation, faMailBulk, faPhone, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown, faLocation, faMailBulk, faPhone, faSearch, faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 import './Nav.css'
-import { faFacebook, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const Nav = () => {
 
+  const [search, setSearch] = useState(false);
+  const handleSearch = () => {
+    setSearch(true)
+  }
+
   const isLoggedIn = localStorage.getItem('isLoggedIn')
+   //logOut User
+  const handleLogOut  = () => {
+    setShowingLinks(false)
+    return (
+      localStorage.removeItem('isLoggedIn')
+    )
+  }
+  
+  const [showingLinks, setShowingLinks] = useState(false);
+  const handleToggleDisplay = () => setShowingLinks(!showingLinks)
+  // const handleClose = () => setShowingLinks(false)
 
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -33,9 +49,10 @@ const Nav = () => {
   const [dropdown, setDropdown] = useState(false)
   const onMouseEnter  = () => setDropdown(true)
   const onMouseLeave  = () => setDropdown(false)
-  //logOut User
-  const handleLogOut  = () => localStorage.removeItem('isLoggedIn')
+
+  const [dropDownMobile, setDropDownMobile] = useState(false);
   
+  const handleDropMobile = () => setDropDownMobile(!dropDownMobile)
 
   return (
     <div className="navbar-full-container">
@@ -60,7 +77,13 @@ const Nav = () => {
             <FontAwesomeIcon icon={faLinkedin}  className="item-social"/>
           </Link>
 
-          <FontAwesomeIcon icon={faSearch} className="search-icon" />
+          <FontAwesomeIcon icon={faSearch} onClick={handleSearch} className="search-icon" />
+          {search && (
+            <div className="absolute-search">
+              <input type="text" placeholder="Type Something..." className="search-nav"/>
+              <button onClick={() => setSearch(false)}>X</button>
+            </div>
+          )}
         </div>
 
       </div>
@@ -70,39 +93,58 @@ const Nav = () => {
             <img src={logo} alt="logo" className="logo" />
           </NavLink>
 
-        <ul className="nav-links"> 
-          <li>
-            <NavLink to='/' className={({isActive}) => isActive ? 'active-Link' : null} >Home</NavLink>
-          </li>
+          <div className="toggle-bar">
+            <FontAwesomeIcon 
+              icon={!showingLinks? faBars : faTimes} 
+              className="faBar-faTimes" 
+              onClick={handleToggleDisplay} 
+            />
+          </div>
 
-          <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >
-            <p className="hr-managt-item">HR Management <FontAwesomeIcon className="dropIcon" icon={faAngleDown}/></p>
-            { dropdown && <Dropdown /> }   
-          </li>
+          <ul className={ showingLinks ? 'show-links-mobile' : 'nav-links' }> 
+            <li>
+              <NavLink to='/' className={({isActive}) => isActive &&  showingLinks ? 'active-Link-mobile' : isActive && 'active-Link'} onClick={() => setShowingLinks(false)} >Home</NavLink>
+            </li>
 
-          <li>
-            <NavLink to='Services' className={({isActive}) => isActive ? 'active-Link' : null} >Services</NavLink>
-          </li>
+            {/* Desktop View */}
+            {!showingLinks && (
+              <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >
+                <p className="hr-managt-item">HR Management <FontAwesomeIcon className="dropIcon" icon={faAngleDown} /> </p>
+                { dropdown && <Dropdown setShowingLinks={setShowingLinks} /> }
+              </li>
+            )}
 
-          <li>
-            <NavLink to='About' className={({isActive}) => isActive ? 'active-Link' : null} >About Us</NavLink>
-          </li>
+            {/* Mobile view */}
+            { showingLinks && (
+            <li>
+              <button onClick={handleDropMobile}>HR Management <FontAwesomeIcon className="dropIcon" icon={faAngleDown} /></button>
+            </li>
+            ) }
+            { dropDownMobile && <Dropdown dropdown={dropdown} showingLinks={showingLinks} setShowingLinks={setShowingLinks} /> }
 
-          <li>
-            <NavLink to='Contact' className={({isActive}) => isActive ? 'active-Link' : null} >Contact Us</NavLink>
-          </li>
-          
-        </ul>
+            <li>
+              <NavLink to='Services' className={ ({isActive}) => isActive &&  showingLinks ? 'active-Link-mobile' : isActive && 'active-Link' } onClick={() => setShowingLinks(false)} >Services</NavLink>
+            </li>
 
-        <div className="my-nav-links">
+            <li>
+              <NavLink to='About' className={ ({isActive}) => isActive &&  showingLinks ? 'active-Link-mobile' : isActive && 'active-Link' } onClick={() => setShowingLinks(false)} >About Us</NavLink>
+            </li>
+
+            <li>
+              <NavLink to='Contact' className={ ({isActive}) => isActive &&  showingLinks ? 'active-Link-mobile' : isActive && 'active-Link' } onClick={() => setShowingLinks(false)} >Contact Us</NavLink>
+            </li>
+            
+          </ul>
+
+        <div className={showingLinks ? 'login-signup-links-mobile' : 'my-nav-links'}>
           
           {
             !isLoggedIn ? (
-              <Link to='Login' className="link-nav" id="login">
+              <Link to='Login' className="link-nav" id="login" onClick={() => setShowingLinks(false)}>
                 Log In
               </Link>
             ) : (
-              <button onClick={handleLogOut} className="link-nav" id="login" >Log Out</button>
+              <Link onClick={handleLogOut} className="link-nav" id="login">Log Out</Link>
             )
           }
 
@@ -110,6 +152,7 @@ const Nav = () => {
             to='SignUp' 
             className={isLoggedIn ? 'cursor-disabled link-nav' : 'link-nav'} 
             id="signin"
+            onClick={() => setShowingLinks(false)}
           >
             Sign Up
           </Link>

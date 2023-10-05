@@ -106,3 +106,9 @@
 .login-links > button:hover {
     color: thistle;
 }
+
+@media only screen and (max-width: 600px) {
+    .login-overlay > div {
+        width: 70%;
+    }
+}

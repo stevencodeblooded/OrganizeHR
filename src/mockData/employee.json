@@ -1,0 +1,300 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "jobTitle": "Software Engineer",
+    "profilePicture": "https://marketplace.canva.com/EAFfyNv3EC4/2/0/1600w/canva-orange-black-modern-facebook-profile-picture-17RW-gVJo5k.jpg",
+    "email": "john@example.com",
+    "phone": "123-456-7890",
+    "department": "Engineering",
+    "address": "123 Main Street, City, Country",
+    "employmentStatus": "Active",
+    "dateOfJoining": "2022-01-15",
+    "employmentType": "Full-Time",
+    "reportingManager": {
+      "name": "Manager Name",
+      "email": "manager@example.com",
+      "phone": "987-654-3210"
+    },
+    "leaveBalance": 15,
+    "performanceReviews": [
+      { "date": "2022-03-01", "rating": "Positive", "comments": "Well done!" }
+    ],
+    "leaveHistory": [
+      {
+        "type": "Sick Leave",
+        "dates": "2022-05-15 to 2022-05-17",
+        "status": "Approved"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "jobTitle": "UX Designer",
+    "profilePicture": "https://marketplace.canva.com/EAFfyNv3EC4/2/0/1600w/canva-orange-black-modern-facebook-profile-picture-17RW-gVJo5k.jpg",
+    "email": "jane@example.com",
+    "phone": "987-654-3210",
+    "department": "Design",
+    "address": "123 Main Street, City, Country",
+    "employmentStatus": "Active",
+    "dateOfJoining": "2022-01-15",
+    "employmentType": "Full-Time",
+    "reportingManager": {
+      "name": "Manager Name",
+      "email": "manager@example.com",
+      "phone": "987-654-3210"
+    },
+    "leaveBalance": 15,
+    "performanceReviews": [
+      { "date": "2022-03-01", "rating": "Positive", "comments": "Well done!" }
+    ],
+    "leaveHistory": [
+      {
+        "type": "Sick Leave",
+        "dates": "2022-05-15 to 2022-05-17",
+        "status": "pending"
+      }
+    ]
+  },
+
+  {
+    "id": 3,
+    "name": "Michael Johnson",
+    "jobTitle": "Product Manager",
+    "profilePicture": "https://marketplace.canva.com/EAFfyNv3EC4/2/0/1600w/canva-orange-black-modern-facebook-profile-picture-17RW-gVJo5k.jpg",
+    "email": "michael@example.com",
+    "phone": "555-555-5555",
+    "department": "Product",
+    "address": "123 Main Street, City, Country",
+    "employmentStatus": "Active",
+    "dateOfJoining": "2022-01-15",
+    "employmentType": "Full-Time",
+    "reportingManager": {
+      "name": "Manager Name",
+      "email": "manager@example.com",
+      "phone": "987-654-3210"
+    },
+    "leaveBalance": 15,
+    "performanceReviews": [
+      { "date": "2022-03-01", "rating": "Positive", "comments": "Well done!" }
+    ],
+    "leaveHistory": [
+      {
+        "type": "Sick Leave",
+        "dates": "2022-05-15 to 2022-05-17",
+        "status": "Approved"
+      }
+    ]
+  },
+
+  {
+    "id": 4,
+    "name": "Emily Brown",
+    "jobTitle": "Marketing Specialist",
+    "profilePicture": "https://marketplace.canva.com/EAFfyNv3EC4/2/0/1600w/canva-orange-black-modern-facebook-profile-picture-17RW-gVJo5k.jpg",
+    "email": "emily@example.com",
+    "phone": "111-222-3333",
+    "department": "Marketing",
+    "address": "123 Main Street, City, Country",
+    "employmentStatus": "Active",
+    "dateOfJoining": "2022-01-15",
+    "employmentType": "Full-Time",
+    "reportingManager": {
+      "name": "Manager Name",
+      "email": "manager@example.com",
+      "phone": "987-654-3210"
+    },
+    "leaveBalance": 15,
+    "performanceReviews": [
+      { "date": "2022-03-01", "rating": "Positive", "comments": "Well done!" }
+    ],
+    "leaveHistory": [
+      {
+        "type": "Sick Leave",
+        "dates": "2022-05-15 to 2022-05-17",
+        "status": "pending"
+      }
+    ]
+  },
+
+  {
+    "id": 5,
+    "name": "David Wilson",
+    "jobTitle": "Financial Analyst",
+    "profilePicture": "https://marketplace.canva.com/EAFfyNv3EC4/2/0/1600w/canva-orange-black-modern-facebook-profile-picture-17RW-gVJo5k.jpg",
+    "email": "david@example.com",
+    "phone": "444-444-4444",
+    "department": "Finance",
+    "address": "123 Main Street, City, Country",
+    "employmentStatus": "Active",
+    "dateOfJoining": "2022-01-15",
+    "employmentType": "Full-Time",
+    "reportingManager": {
+      "name": "Manager Name",
+      "email": "manager@example.com",
+      "phone": "987-654-3210"
+    },
+    "leaveBalance": 15,
+    "performanceReviews": [
+      { "date": "2022-03-01", "rating": "Positive", "comments": "Well done!" }
+    ],
+    "leaveHistory": [
+      {
+        "type": "Sick Leave",
+        "dates": "2022-05-15 to 2022-05-17",
+        "status": "rejected"
+      }
+    ]
+  },
+
+  {
+    "id": 6,
+    "name": "Sophia Lee",
+    "jobTitle": "HR Manager",
+    "profilePicture": "https://marketplace.canva.com/EAFfyNv3EC4/2/0/1600w/canva-orange-black-modern-facebook-profile-picture-17RW-gVJo5k.jpg",
+    "email": "sophia@example.com",
+    "phone": "666-666-6666",
+    "department": "Human Resources",
+    "address": "123 Main Street, City, Country",
+    "employmentStatus": "Active",
+    "dateOfJoining": "2022-01-15",
+    "employmentType": "Full-Time",
+    "reportingManager": {
+      "name": "Manager Name",
+      "email": "manager@example.com",
+      "phone": "987-654-3210"
+    },
+    "leaveBalance": 15,
+    "performanceReviews": [
+      { "date": "2022-03-01", "rating": "Positive", "comments": "Well done!" }
+    ],
+    "leaveHistory": [
+      {
+        "type": "Sick Leave",
+        "dates": "2022-05-15 to 2022-05-17",
+        "status": "pending"
+      }
+    ]
+  },
+
+  {
+    "id": 7,
+    "name": "Ethan Martinez",
+    "jobTitle": "Operations Supervisor",
+    "profilePicture": "https://marketplace.canva.com/EAFfyNv3EC4/2/0/1600w/canva-orange-black-modern-facebook-profile-picture-17RW-gVJo5k.jpg",
+    "email": "ethan@example.com",
+    "phone": "777-777-7777",
+    "department": "Operations",
+    "address": "123 Main Street, City, Country",
+    "employmentStatus": "Active",
+    "dateOfJoining": "2022-01-15",
+    "employmentType": "Full-Time",
+    "reportingManager": {
+      "name": "Manager Name",
+      "email": "manager@example.com",
+      "phone": "987-654-3210"
+    },
+    "leaveBalance": 15,
+    "performanceReviews": [
+      { "date": "2022-03-01", "rating": "Positive", "comments": "Well done!" }
+    ],
+    "leaveHistory": [
+      {
+        "type": "Sick Leave",
+        "dates": "2022-05-15 to 2022-05-17",
+        "status": "Approved"
+      }
+    ]
+  },
+
+  {
+    "id": 8,
+    "name": "Olivia Anderson",
+    "jobTitle": "Sales Representative",
+    "profilePicture": "https://marketplace.canva.com/EAFfyNv3EC4/2/0/1600w/canva-orange-black-modern-facebook-profile-picture-17RW-gVJo5k.jpg",
+    "email": "olivia@example.com",
+    "phone": "888-888-8888",
+    "department": "Sales",
+    "address": "123 Main Street, City, Country",
+    "employmentStatus": "Active",
+    "dateOfJoining": "2022-01-15",
+    "employmentType": "Full-Time",
+    "reportingManager": {
+      "name": "Manager Name",
+      "email": "manager@example.com",
+      "phone": "987-654-3210"
+    },
+    "leaveBalance": 15,
+    "performanceReviews": [
+      { "date": "2022-03-01", "rating": "Positive", "comments": "Well done!" }
+    ],
+    "leaveHistory": [
+      {
+        "type": "Sick Leave",
+        "dates": "2022-05-15 to 2022-05-17",
+        "status": "Rejected"
+      }
+    ]
+  },
+
+  {
+    "id": 9,
+    "name": "William Taylor",
+    "jobTitle": "Quality Assurance Engineer",
+    "profilePicture": "https://marketplace.canva.com/EAFfyNv3EC4/2/0/1600w/canva-orange-black-modern-facebook-profile-picture-17RW-gVJo5k.jpg",
+    "email": "william@example.com",
+    "phone": "999-999-9999",
+    "department": "Engineering",
+    "address": "123 Main Street, City, Country",
+    "employmentStatus": "Active",
+    "dateOfJoining": "2022-01-15",
+    "employmentType": "Full-Time",
+    "reportingManager": {
+      "name": "Manager Name",
+      "email": "manager@example.com",
+      "phone": "987-654-3210"
+    },
+    "leaveBalance": 15,
+    "performanceReviews": [
+      { "date": "2022-03-01", "rating": "Positive", "comments": "Well done!" }
+    ],
+    "leaveHistory": [
+      {
+        "type": "Sick Leave",
+        "dates": "2022-05-15 to 2022-05-17",
+        "status": "Approved"
+      }
+    ]
+  },
+
+  {
+    "id": 10,
+    "name": "Ava Hernandez",
+    "jobTitle": "Content Writer",
+    "profilePicture": "https://marketplace.canva.com/EAFfyNv3EC4/2/0/1600w/canva-orange-black-modern-facebook-profile-picture-17RW-gVJo5k.jpg",
+    "email": "ava@example.com",
+    "phone": "123-123-1234",
+    "department": "Content",
+    "address": "123 Main Street, City, Country",
+    "employmentStatus": "Active",
+    "dateOfJoining": "2022-01-15",
+    "employmentType": "Full-Time",
+    "reportingManager": {
+      "name": "Manager Name",
+      "email": "manager@example.com",
+      "phone": "987-654-3210"
+    },
+    "leaveBalance": 15,
+    "performanceReviews": [
+      { "date": "2022-03-01", "rating": "Positive", "comments": "Well done!" }
+    ],
+    "leaveHistory": [
+      {
+        "type": "Sick Leave",
+        "dates": "2022-05-15 to 2022-05-17",
+        "status": "pending"
+      }
+    ]
+  }
+]

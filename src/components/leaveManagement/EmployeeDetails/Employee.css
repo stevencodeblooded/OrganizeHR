@@ -21,3 +21,9 @@
 .loading-employee > img {
     margin-bottom: 30px;
 }
+
+@media only screen and (max-width: 900px) {
+    .employee--page {
+        width: 100%;
+    }
+}

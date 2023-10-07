@@ -9,7 +9,8 @@ const Dropdown = ({dropdown, showingLinks, setShowingLinks}) => {
 
   const activeLink = {
     backgroundColor: '#054146',
-    borderRadius: '6px'
+    borderRadius: '6px',
+    color: 'thistle'
   }
 
   return (

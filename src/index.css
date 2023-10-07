@@ -4,17 +4,6 @@
   font-family: "Segoe UI";
 }
 
-/* body {
-  min-height: 100vh;
-  position:  relative;
-}
-
-.footer {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-} */
-
 /*------------- All the Reamining -------------  */
 
 .intern-directory, 
@@ -49,43 +38,6 @@
   justify-content: center;
   
 } 
-/* 
-.arrow {
-  position: absolute;
-  font-size: 30px;
-  color: #007bff;
-  cursor: pointer;
-  transition: .3s all ease-in-out;
-}
-
-.arrow:hover {
-  color: #03687f;
-}
-
-.arrow-right {
-  right: 1rem;
-}
-
-.arrow-left {
-  left: 1rem;
-}
-
-.indicators {
-  display: flex;
-  position: absolute;
-  bottom: 1rem;
-}
-
-.indicator {
-  background-color: #007bff;
-  height: 0.5rem;
-  width: 0.5rem;
-  border-radius: 100%;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  margin-inline: 4px; 
-} */
 
 .horizontal-service {
   margin-block: 50px;
@@ -257,9 +209,3 @@
   }
 }
 /* -----------------Employee Onboarding----------------- */
-  
-
-/*------------- Responsiveness -------------*/
-@media (max-width: 768px) {
-  
-}

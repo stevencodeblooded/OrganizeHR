@@ -21,3 +21,11 @@
   margin-right: 2px;
   text-align: center;
 }
+
+@media only screen and (max-width: 1000px) {
+  .filter-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+}

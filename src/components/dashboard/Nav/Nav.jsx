@@ -103,7 +103,7 @@ const Nav = () => {
 
           <ul className={ showingLinks ? 'show-links-mobile' : 'nav-links' }> 
             <li>
-              <NavLink to='/' className={({isActive}) => isActive &&  showingLinks ? 'active-Link-mobile' : isActive && 'active-Link'} onClick={() => setShowingLinks(false)} >Home</NavLink>
+              <NavLink to='/' className={({isActive}) => isActive &&  showingLinks ? 'active-Link-mobile' : isActive ? 'active-Link' : null} onClick={() => setShowingLinks(false)} >Home</NavLink>
             </li>
 
             {/* Desktop View */}
@@ -123,15 +123,15 @@ const Nav = () => {
             { dropDownMobile && <Dropdown dropdown={dropdown} showingLinks={showingLinks} setShowingLinks={setShowingLinks} /> }
 
             <li>
-              <NavLink to='Services' className={ ({isActive}) => isActive &&  showingLinks ? 'active-Link-mobile' : isActive && 'active-Link' } onClick={() => setShowingLinks(false)} >Services</NavLink>
+              <NavLink to='Services' className={ ({isActive}) => isActive &&  showingLinks ? 'active-Link-mobile' : isActive ? 'active-Link' : null } onClick={() => setShowingLinks(false)} >Services</NavLink>
             </li>
 
             <li>
-              <NavLink to='About' className={ ({isActive}) => isActive &&  showingLinks ? 'active-Link-mobile' : isActive && 'active-Link' } onClick={() => setShowingLinks(false)} >About Us</NavLink>
+              <NavLink to='About' className={ ({isActive}) => isActive &&  showingLinks ? 'active-Link-mobile' : isActive ? 'active-Link' : null } onClick={() => setShowingLinks(false)} >About Us</NavLink>
             </li>
 
             <li>
-              <NavLink to='Contact' className={ ({isActive}) => isActive &&  showingLinks ? 'active-Link-mobile' : isActive && 'active-Link' } onClick={() => setShowingLinks(false)} >Contact Us</NavLink>
+              <NavLink to='Contact' className={ ({isActive}) => isActive &&  showingLinks ? 'active-Link-mobile' : isActive ? 'active-Link' : null } onClick={() => setShowingLinks(false)} >Contact Us</NavLink>
             </li>
             
           </ul>

@@ -25,7 +25,7 @@ const Contact = () => {
 
       <div className='contact-form'>
         <div>
-          <p data-aos='zoom-in-up' data-aos-duration='1000'>We value your inquiries and feedback. Our team is here to assist you. Please feel free to reach out to us through the following contact information:</p>
+          <p data-aos='zoom-in-up' data-aos-duration='1500'>We value your inquiries and feedback. Our team is here to assist you. Please feel free to reach out to us through the following contact information:</p>
           <img src={imageContact} alt="ImageContact"  data-aos='flip-right' data-aos-duration='1500' />
         </div>
 

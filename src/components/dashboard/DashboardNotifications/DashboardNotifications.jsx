@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import './DashboardNotifications.css'
 
 const DashboardNotifications = () => {
+
+  useEffect(() => {
+    Aos.init()
+  }, [])
+
   return (
-    <div className='dashboard-notifications'>
+    <div className='dashboard-notifications' data-aos='fade-left' data-aos-duration='1000'>
           <h2>Notifications</h2>
           <div className='notification-item'>
               <h3>New Job Opening</h3>

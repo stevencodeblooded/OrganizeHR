@@ -21,7 +21,7 @@ const Checklist = () => {
 
   return (
     <div className='checklist'>
-        <div className='list-tasks'>
+        <div className='list-tasks' data-aos='fade-up' data-aos-duration='1500'>
             <h2>Onboarding Checklist</h2>
             <ul>
                 {tasks.map((task) => {

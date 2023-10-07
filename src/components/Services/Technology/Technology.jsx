@@ -5,7 +5,7 @@ import './Technology.css'
 
 const Technology = () => {
   return (
-   <div className='service'>
+   <div className='service' data-aos='fade-right' data-aos-duration='2000'>
       <div>
         <h3>Payroll and HR Technology</h3>
         <p>

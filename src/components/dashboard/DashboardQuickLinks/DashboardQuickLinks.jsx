@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { Link } from 'react-router-dom' 
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import './DashboardQuickLinks.css'
 
 const DashboardQuickLinks = () => {
+
+  useEffect(() => {
+    Aos.init()
+  })
+
   return (
-    <div className='dashboard-quick-links'> 
+    <div className='dashboard-quick-links' data-aos='fade-up-left'  data-aos-duration='1000'> 
             <h2>Quick-Links</h2>
             <div className='quick-link-item'>
                 <h3>Applicant Tracking</h3>

@@ -5,7 +5,7 @@ import './Training.css'
 
 const Training = () => {
   return (
-    <div className='service'>
+    <div className='service' data-aos='fade-left' data-aos-duration='2000'>
 
       <img src={consultingImage} alt="consulting" className='service-image'/>
 

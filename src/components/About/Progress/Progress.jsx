@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBilibili, fa42Group, faAccessibleIcon, faAirbnb } from '@fortawesome/free-brands-svg-icons'
@@ -6,14 +6,15 @@ import { faBilibili, fa42Group, faAccessibleIcon, faAirbnb } from '@fortawesome/
 import './Progress.css'
 
 const Progress = () => {
+
   return (
     <div className='flex'>
-      <div className='border'>
+      <div className='border' data-aos='fade-up' data-aos-duration='1500'>
         <div className='inner-border'>
           <h3>Unlocking progress at scale</h3>
           <div className='progress-elements'>
             <div>
-              <FontAwesomeIcon className='scale-icon' icon={faBilibili}/>
+              <FontAwesomeIcon className='scale-icon' icon={faBilibili} />
               <h3>2,000</h3>
               <p>Lorem ipsum dolor</p>
             </div>

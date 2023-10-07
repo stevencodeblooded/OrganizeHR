@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import consultingImage  from '../../../images/bg1.jpg'
-
 import './Consulting.css'
 
 const Consulting = () => {
+
+  useEffect(() => {
+    Aos.init()
+  }, [])
+
   return (
-      <div className='service'>
+      <div className='service' data-aos='fade-right' data-aos-duration='2000'>
         <div>
           <h3>HR Consulting</h3>
             <p>

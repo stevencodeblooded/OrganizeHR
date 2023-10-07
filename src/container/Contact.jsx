@@ -25,11 +25,11 @@ const Contact = () => {
 
       <div className='contact-form'>
         <div>
-          <p>We value your inquiries and feedback. Our team is here to assist you. Please feel free to reach out to us through the following contact information:</p>
-          <img src={imageContact} alt="ImageContact" />
+          <p data-aos='zoom-in-up' data-aos-duration='1000'>We value your inquiries and feedback. Our team is here to assist you. Please feel free to reach out to us through the following contact information:</p>
+          <img src={imageContact} alt="ImageContact"  data-aos='flip-right' data-aos-duration='1500' />
         </div>
 
-        <Form method='post' className='contact-inputs'>
+        <Form method='post' className='contact-inputs' data-aos='flip-right' data-aos-duration='1500'>
           <h2>Send Us a Message</h2>
           <section>
             <input type="text" name="fname"  placeholder='first name' required/>
@@ -44,7 +44,7 @@ const Contact = () => {
 
       <div className='container-hours-location'>
         <div className='hours-location'>
-          <div>
+          <div data-aos='zoom-in-up' data-aos-duration='2000'>
             <h3>Business Hours</h3>
             <ul>
               <li>Monday - Friday: 9:00 AM - 5:00 PM</li>
@@ -52,7 +52,8 @@ const Contact = () => {
               <li>Sunday: Closed</li>
             </ul>
           </div>
-          <div>
+
+          <div data-aos='zoom-in-up' data-aos-duration='2000'>
             <h3>Location</h3>
             <ul>
               <li>Fortis Suites, 3rd Floor, 302</li>

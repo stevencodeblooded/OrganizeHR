@@ -5,7 +5,7 @@ import './Distinction.css'
 const Distinction = () => {
   return (
     <div className='distinction'>
-        <div>
+        <div data-aos='fade-up' data-aos-duration='1500'>
           <h2>What Sets Us Apart</h2>
           <p>
             <span>Expertise:</span> Our team of HR experts brings years of industry experience to the table. We stay up-to-date with the latest HR trends and best practices to provide you with valuable insights and strategies.

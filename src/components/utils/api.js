@@ -29,7 +29,7 @@ export async function getApplicants() {
         id: doc.id
     })) 
 
-    console.log(dataArr); //the array is logged in console
+    console.log('APplicnat', dataArr);
     return dataArr
 }
 
@@ -40,8 +40,7 @@ export async function getEmployees() {
     ...doc.data(),
     id: doc.id
    })) 
-
-   console.log(dataArr);
+   console.log('Employees', dataArr);
    return dataArr
 }
 
@@ -49,11 +48,10 @@ export async function getEmployees() {
 export async function getEmployee(id) {
     const docRef = doc(db, 'employees', id)
     const employeeSnapshot = await getDoc(docRef)
-    return {
+    const employeeData = {
         ...employeeSnapshot.data(),
         id: employeeSnapshot.id
     }
+    console.log('One Employee', employeeData);
+    return employeeData
 }
-
-//Leave Management
-//Intern Directory

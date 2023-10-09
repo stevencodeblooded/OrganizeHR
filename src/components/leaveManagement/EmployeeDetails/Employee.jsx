@@ -1,38 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { useParams } from "react-router-dom";
-
-import allEmployees from '../../../mockData/employeesList'
-import EmployeInfo from './EmployeeInfo/EmployeInfo'
-import loading from '../../../images/loading.png'
+import { getEmployee } from "../../utils/api"; 
+import EmployeInfo from "./EmployeeInfo/EmployeInfo";
+import loading from "../../../images/loading.png";
 import Others from "./OtherDetails/Others";
 import { authRequired } from "../../utils/AuthRequired";
 
 import "./Employee.css";
 
-export async function loader ({ request }) {
-  return await authRequired(request)
+export async function loader({ request }) {
+  return await authRequired(request);
 }
 
 const Employee = () => {
+  
   const { employeeId } = useParams();
+  const [employee, setEmployee] = useState(null);
 
-  const employee = allEmployees.find((employee) => {
-    return employee.id === parseInt(employeeId);
-  });
+  useEffect(() => {
+    const fetchEmployee = async () => {
+      try {
+        const employeeData = await getEmployee(employeeId);
+        setEmployee(employeeData);
+      } catch (error) {
+        console.error("Error fetching employee:", error);
+      }
+    };
+
+    fetchEmployee();
+  }, [employeeId]);
 
   return (
     <div>
       <div className="employee--page">
         {employee ? (
           <section className="each-employee-bg">
-            <EmployeInfo 
-              employee={employee}
-            /> 
-
-            <Others 
-              employee={employee}
-            />
+            <EmployeInfo employee={employee} />
+            <Others employee={employee} />
           </section>
         ) : (
           <div className="loading-employee">

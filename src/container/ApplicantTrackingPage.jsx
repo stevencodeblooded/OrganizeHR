@@ -8,7 +8,7 @@ import { authRequired } from '../components/utils/AuthRequired'
 
 export async function loader ({ request }) {
   await authRequired(request)
-  const applicants = getApplicants()
+  const applicants = await getApplicants()
   return applicants
 }
 

@@ -1,9 +1,6 @@
-import React, {useState, Suspense } from "react";
-
-import { Await } from "react-router-dom";
+import React, {useState } from "react";
 
 import ApplicantsList from "../ApplicantsList/ApplicantsList";
-// import applicantsList from "../../../mockData/applicantsList"; //To be removed later and add the prop(applcants) 
 import ApplicantDetails from "../ApplicantDetails/ApplicantDetails";
 import FilterContainer from "../FilterContainer/FilterContainer";
 
@@ -19,7 +16,6 @@ const ApplicantTracking = ({ applicants }) => {
     status: "",
   });
 
-  // const [applicants, setApplicants] = useState(applicantsList)
   const [selectedApplicantIndex, setSelectedApplicantIndex] = useState(0)
 
   const goBack = () => {
@@ -82,8 +78,9 @@ const ApplicantTracking = ({ applicants }) => {
     />
   ));
 
-  //Applicant Delete(remember this changes state hence update it) 
+    //Delete Applicant
   const handleApplicantDelete = (applicantId) => {
+    // Filter the applicants array to remove the deleted applicant
     const updatedApplicants = applicants.filter((applicant) => {
       return applicant.id !== applicantId
     })
@@ -100,13 +97,9 @@ const ApplicantTracking = ({ applicants }) => {
       />
 
       <section>
-        <Suspense fallback={<h1>Loading the Applicants...</h1>}>
-          <Await resolve={applicants}>
-            <div className="all-applicants">
-              {applicantsData}
-            </div>
-          </Await>
-        </Suspense>
+          <div className="all-applicants">
+            {applicantsData}
+          </div>
       </section>
 
       <ApplicantDetails
@@ -116,7 +109,6 @@ const ApplicantTracking = ({ applicants }) => {
         goNext={goNext}
         selectedApplicantIndex={selectedApplicantIndex}
         applicants={applicants}
-        // setApplicants={setApplicants}
         onDelete={handleApplicantDelete}
       />
 

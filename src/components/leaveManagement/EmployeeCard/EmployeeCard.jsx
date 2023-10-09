@@ -1,11 +1,9 @@
 import React from 'react'
 
-import allEmployees from '../../../mockData/employeesList'
 import Card from './Card/Card'
-
 import './EmployeeCard.css'
 
-const EmployeeCard = () => {
+const EmployeeCard = ({ allEmployees }) => {
 
   const employeeData = allEmployees.map((employee) => {
     return (

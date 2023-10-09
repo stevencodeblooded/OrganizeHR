@@ -5,12 +5,13 @@ import SearchFilter from './SearchFilter/SearchFilter'
 import EmployeeCard from './EmployeeCard/EmployeeCard'
 import Pagination from './Pagination/Pagination'
 
-const LeaveManagement = () => {
+const LeaveManagement = ({employees}) => {
+
   return (
     <div>
         <Header />
         <SearchFilter />
-        <EmployeeCard />
+        <EmployeeCard allEmployees={employees} />
         <Pagination />
     </div>
   )

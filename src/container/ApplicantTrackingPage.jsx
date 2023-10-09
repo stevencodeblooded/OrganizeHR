@@ -8,16 +8,16 @@ import { authRequired } from '../components/utils/AuthRequired'
 
 export async function loader ({ request }) {
   await authRequired(request)
-  const applicantsPromise = getApplicants()
-  return applicantsPromise
+  const applicants = getApplicants()
+  return applicants
 }
 
 const ApplicantTrackingPage = () => {
+
   const applicantsList = useLoaderData()
 
   return (
     <div>
-        {/* pass the applicants as prop */}  
         <ApplicantTracking applicants={applicantsList} />
     </div>
   )
